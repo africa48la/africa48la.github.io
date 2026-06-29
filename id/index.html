@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Encoder Base64 / URL / Hex &amp; Sandi Sederhana - alat teks online gratis</title>
+<meta name="description" content="Alat teks sisi klien gratis: encode/decode Base64, URL dan Hex dengan penanganan UTF-8 yang benar, jumlah byte dan karakter langsung, dan sandi frasa sandi sederhana. Tidak ada yang diunggah.">
+<link rel="canonical" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Encoder Base64 / URL / Hex &amp; Sandi Sederhana - alat teks online gratis"><meta property="og:description" content="Alat teks sisi klien gratis: encode/decode Base64, URL dan Hex dengan penanganan UTF-8 yang benar, jumlah byte dan karakter langsung, dan sandi frasa sandi sederhana. Tidak ada yang diunggah."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/id/"><meta property="og:image" content="https://africa48la.github.io/img/cover_id.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Encoder Base64 / URL / Hex & Sandi Sederhana - alat teks online gratis",
+   "url": "https://africa48la.github.io/id/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "id",
+   "description": "Alat teks sisi klien gratis: encode/decode Base64, URL dan Hex dengan penanganan UTF-8 yang benar, jumlah byte dan karakter langsung, dan sandi frasa sandi sederhana. Tidak ada yang diunggah.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "id",
+   "url": "https://africa48la.github.io/id/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Apakah teks saya diunggah di mana saja?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Semua pengkodean, penguraian kode, dan sandi dijalankan di browser Anda dengan API web standar; teks Anda tidak pernah meninggalkan perangkat Anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah Base64 mengenkripsi data saya?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Base64 adalah pengkodean, bukan enkripsi - siapa pun dapat memecahkan kodenya. Itu hanya membuat byte aman untuk diangkut, tidak merahasiakannya."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mengapa emoji atau bahasa Mandarin Base64 terlihat berbeda dari alat lainnya?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Karena alat ini mengkodekan byte UTF-8 yang benar melalui TextEncoder. Alat yang memanggil btoa() secara langsung menggagalkan atau merusak karakter di atas Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apa perbedaan antara pengkodean URL dan Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pengkodean URL (encodeURIComponent) lolos dari karakter yang tidak aman di URL menggunakan % urutan; Base64 menulis ulang byte mentah menjadi alfabet 64 karakter. Mereka memecahkan berbagai masalah transportasi."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah sandi frasa sandi aman?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Ini adalah XOR sederhana untuk kebingungan ringan saja. Untuk kerahasiaan nyata, gunakan pengirim pesan terenkripsi end-to-end yang tepat seperti Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Berapakah = di akhir Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Itu adalah bantalan. Base64 bekerja dalam blok empat karakter; = mengisi blok terakhir ketika panjang input bukan kelipatan tiga byte."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Bahasa: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <strong>Bahasa Indonesia</strong> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Enkoder Base64 / URL / Hex &amp; Sandi Sederhana</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_id.webp"><img src="/img/cover_id.png" alt="Encoder teks Base64 URL Hex dan ilustrasi alat sandi sederhana" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Encoder Base64 / URL / Hex dan sandi frasa sandi sederhana - semuanya di sisi klien</figcaption></figure>
+<p>Tempelkan teks apa pun untuk menyandikan atau mendekodekannya sebagai Base64, URL-escaped, atau Hex, dan untuk menghitung byte dan karakter UTF-8-nya. Ada juga sandi frasa sandi sederhana untuk kebingungan cepat. Semuanya berjalan di browser Anda; teks Anda tidak pernah diunggah.</p>
+<section class="tool"><h2>Menyandikan, mendekode, dan menghitung</h2><p class="note">Berjalan sepenuhnya di browser Anda. Base64 menggunakan TextEncoder sehingga Unicode dan emoji ditangani dengan benar.</p><label>Masukkan teks</label><textarea id="tin" placeholder="Tempel atau ketik teks di sini..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 byte · <span id="cchars">0</span> Karakter</div><label>Frasa sandi (untuk sandi)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Pengkodean Base64</button><button data-m="b64d">Dekode Base64</button><button data-m="urle">Pengkodean URL</button><button data-m="urld">Dekode URL</button><button data-m="hexe">Pengkodean Hex</button><button data-m="hexd">Dekode Hex</button><button data-m="cye">Sandi (enkripsi)</button><button data-m="cyd">Sandi (mendekripsi)</button></div><label>Keluaran</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">Salin keluaran</button><button id="tclear">Jelas</button><button id="tswap">Keluaran ke masukan</button></div><p class="note">Kebingungan XOR sederhana - bukan pengganti enkripsi ujung ke ujung yang sebenarnya.</p></section>
+<h2>Apa yang dilakukan (dan tidak) dilakukan oleh pengkodean teks</h2><p>Base64, URL-escaping, dan Hex merupakan pengkodean: keduanya menulis ulang byte menjadi rangkaian karakter yang aman sehingga teks dan data biner dapat bertahan dalam pengangkutan melalui email, URL, dan JSON. Mereka sepenuhnya dapat dibatalkan oleh siapa pun dan tidak memberikan kerahasiaan. Gunakan mereka untuk memindahkan data dengan aman, bukan untuk menyembunyikannya.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teks"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">Teks</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 byte</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">grup 6-bit</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Pipa Base64: teks menjadi byte UTF-8, byte dibagi menjadi grup 6-bit, setiap grup dipetakan ke satu karakter Base64.</figcaption></figure>
+<h2>Cara kerja Base64</h2><p>Base64 didefinisikan oleh RFC 4648. Ini mengelompokkan masukan ke dalam potongan 6-bit dan memetakan setiap potongan ke salah satu dari 64 karakter (A-Z, a-z, 0-9, plus + dan /), diisi dengan = di akhir. Tiga byte masukan menjadi empat karakter keluaran, sehingga teks yang dikodekan berukuran sekitar 33% lebih besar dari masukan. Varian URL-safe menggantikan + dan / dengan - dan _ sehingga hasilnya aman di dalam link.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_id.webp"><img src="/img/board_id.png" alt="Diagram membandingkan pengkodean reversibel dengan enkripsi" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Pengkodean dapat dibalik tanpa kunci; hanya sandi berbasis kunci atau enkripsi ujung ke ujung yang sebenarnya yang menjaga rahasia teks</figcaption></figure>
+<h2>Pengkodean bukanlah enkripsi</h2><p>Kesalahan umum adalah memperlakukan Base64 sebagai cara untuk melindungi data. Tidak: siapa pun dapat memecahkan kodenya. Sandi frasa sandi pada alat ini menambahkan kunci, tetapi XOR yang sederhana hanya bersifat membingungkan dan tidak aman terhadap penyerang yang gigih. Untuk kerahasiaan nyata, gunakan messenger dengan enkripsi ujung ke ujung yang tepat, seperti Telegram Secret Chats, yang menggunakan protokol MTProto dengan AES 256-bit.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pengkodean (dapat dibalik)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">Pengkodean (dapat dibalik)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">Sandi frasa sandi</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">Ujung ke ujung (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>Tiga tingkat: pengkodean yang dapat dibalik (tanpa rahasia), sandi frasa sandi (kebingungan ringan), dan enkripsi ujung ke ujung yang sebenarnya.</figcaption></figure>
+<section class="i4data">
+<h2>Pengkodean konstanta &amp; enkripsi pesan (snapshot 2026)</h2>
+<p>Nilai pengkodean di bawah ini adalah fakta sebenarnya dari RFC 4648 dan MDN; angka yang disampaikan merupakan perkiraan tahun 2026 yang diekstrapolasi dari data dasar publik (angka yang diumumkan Telegram dan Wikipedia) - bukan pengukuran langsung.</p>
+<table>
+<tr><th>Apa yang dilakukan (dan </th><th>Pengkodean konstanta &amp; e</th></tr><tr><td>Ukuran overhead Base64</td><td>+33% (tiga byte input menjadi empat karakter), per RFC 4648 - tepat</td></tr><tr><td>Alfabet Base64</td><td>64 karakter: A-Z, a-z, 0-9, + dan /; bantalan =; Varian aman URL menggunakan - dan _ (RFC 4648 §4-5) - tepat</td></tr><tr><td>Batas btoa / atob</td><td>hanya bekerja pada Latin1; UTF-8 dan emoji memerlukan TextEncoder / TextDecoder (MDN) - tepat</td></tr><tr><td>Pengguna aktif bulanan Telegram</td><td>melampaui 1 miliar pada bulan Maret 2025 (Pavel Durov); Perkiraan tahun 2026: pertumbuhan berkelanjutan</td></tr><tr><td>Enkripsi Telegram</td><td>MTProto dengan AES 256-bit, RSA 2048-bit dan Diffie-Hellman; end-to-end hanya di Secret Chats, bukan default - menurut Wikipedia</td></tr><tr><td>Kesimpulan praktis</td><td>gunakan pengkodean untuk memindahkan teks dengan aman; gunakan Secret Chats (atau aplikasi end-to-end lainnya) saat Anda membutuhkan kerahasiaan</td></tr>
+</table>
+<p><small>Konstanta pengkodeannya tepat (RFC 4648 / MDN); adopsi pesan adalah perkiraan tahun 2026 yang diekstrapolasi dari data dasar publik yang dikutip dan berubah seiring waktu.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>Apakah teks saya diunggah di mana saja?</h3>
+<p>Tidak. Semua pengkodean, penguraian kode, dan sandi dijalankan di browser Anda dengan API web standar; teks Anda tidak pernah meninggalkan perangkat Anda.</p>
+<h3>Apakah Base64 mengenkripsi data saya?</h3>
+<p>Tidak. Base64 adalah pengkodean, bukan enkripsi - siapa pun dapat memecahkan kodenya. Itu hanya membuat byte aman untuk diangkut, tidak merahasiakannya.</p>
+<h3>Mengapa emoji atau bahasa Mandarin Base64 terlihat berbeda dari alat lainnya?</h3>
+<p>Karena alat ini mengkodekan byte UTF-8 yang benar melalui TextEncoder. Alat yang memanggil btoa() secara langsung menggagalkan atau merusak karakter di atas Latin1.</p>
+<h3>Apa perbedaan antara pengkodean URL dan Base64?</h3>
+<p>Pengkodean URL (encodeURIComponent) lolos dari karakter yang tidak aman di URL menggunakan % urutan; Base64 menulis ulang byte mentah menjadi alfabet 64 karakter. Mereka memecahkan berbagai masalah transportasi.</p>
+<h3>Apakah sandi frasa sandi aman?</h3>
+<p>Tidak. Ini adalah XOR sederhana untuk kebingungan ringan saja. Untuk kerahasiaan nyata, gunakan pengirim pesan terenkripsi end-to-end yang tepat seperti Telegram Secret Chats.</p>
+<h3>Berapakah = di akhir Base64?</h3>
+<p>Itu adalah bantalan. Base64 bekerja dalam blok empat karakter; = mengisi blok terakhir ketika panjang input bukan kelipatan tiga byte.</p>
+</div>
+<div class="related"><h2>Dapatkan Telegram</h2><p>Telegram adalah aplikasi perpesanan terenkripsi dengan Secret Chats untuk enkripsi ujung ke ujung. Unduh untuk platform Anda:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - pengunduhan semua platform</a></p></div>
+<div class="sources"><h2>Referensi</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 dalam JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Disusun oleh Ye Fan dari RFC 4648, MDN Web Docs dan Wikipedia. Hanya untuk referensi; semua pengkodean dan sandi dijalankan secara lokal di browser Anda.<br><a href="/about-yefan/" rel="author">Tentang penulis: Kamu Fan</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "Kebingungan XOR sederhana - bukan pengganti enkripsi ujung ke ujung yang sebenarnya.", "clear": "Jelas", "copy": "Salin keluaran", "err_decode": "Kesalahan dekode - periksa inputnya.", "l_bytes": "UTF-8 byte", "l_chars": "Karakter", "l_in": "Masukkan teks", "l_out": "Keluaran", "l_pass": "Frasa sandi (untuk sandi)", "m_b64d": "Dekode Base64", "m_b64e": "Pengkodean Base64", "m_cyd": "Sandi (mendekripsi)", "m_cye": "Sandi (enkripsi)", "m_hexd": "Dekode Hex", "m_hexe": "Pengkodean Hex", "m_urld": "Dekode URL", "m_urle": "Pengkodean URL", "ph_in": "Tempel atau ketik teks di sini...", "run": "Mengkonversi", "swap": "Keluaran ke masukan"};</script>
+<script src="/app.js"></script>
+</body></html>
