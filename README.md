@@ -1,3 +1,7 @@
-# 电报
+# africa48la.github.io
 
-官网: https://telegramencrypted.com/
+Client-side Base64 / URL / Hex encoder & simple cipher (12 languages).
+
+Live: https://africa48la.github.io/
+
+MIT License.
