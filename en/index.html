@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex Encoder &amp; Simple Cipher - free online text tool</title>
+<meta name="description" content="Free client-side text tool: Base64, URL and Hex encode/decode with correct UTF-8 handling, live byte and character counts, and a simple passphrase cipher. Nothing is uploaded.">
+<link rel="canonical" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex Encoder &amp; Simple Cipher - free online text tool"><meta property="og:description" content="Free client-side text tool: Base64, URL and Hex encode/decode with correct UTF-8 handling, live byte and character counts, and a simple passphrase cipher. Nothing is uploaded."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/en/"><meta property="og:image" content="https://africa48la.github.io/img/cover_en.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex Encoder & Simple Cipher - free online text tool",
+   "url": "https://africa48la.github.io/en/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "en",
+   "description": "Free client-side text tool: Base64, URL and Hex encode/decode with correct UTF-8 handling, live byte and character counts, and a simple passphrase cipher. Nothing is uploaded.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "en",
+   "url": "https://africa48la.github.io/en/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Is my text uploaded anywhere?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. All encoding, decoding and the cipher run in your browser with standard web APIs; your text never leaves your device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Does Base64 encrypt my data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. Base64 is an encoding, not encryption - anyone can decode it. It only makes bytes safe to transport, it does not keep them secret."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Why does Base64 of emoji or Chinese look different from other tools?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Because this tool encodes the correct UTF-8 bytes via TextEncoder. Tools that call btoa() directly fail or corrupt characters above Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the difference between URL encoding and Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "URL encoding (encodeURIComponent) escapes characters that are unsafe in a URL using % sequences; Base64 rewrites raw bytes into a 64-character alphabet. They solve different transport problems."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Is the passphrase cipher secure?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "No. It is a simple XOR for light obfuscation only. For real confidentiality use a proper end-to-end encrypted messenger such as Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "What is the = at the end of Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "It is padding. Base64 works in blocks of four characters; = fills the last block when the input length is not a multiple of three bytes."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Language: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <strong>English</strong> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Base64 / URL / Hex Encoder &amp; Simple Cipher</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_en.webp"><img src="/img/cover_en.png" alt="Base64 URL Hex text encoder and simple cipher tool illustration" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex encoder and a simple passphrase cipher - all client-side</figcaption></figure>
+<p>Paste any text to encode or decode it as Base64, URL-escaped, or Hex, and to count its UTF-8 bytes and characters. There is also a simple passphrase cipher for quick obfuscation. Everything runs in your browser; your text is never uploaded.</p>
+<section class="tool"><h2>Encode, decode and count</h2><p class="note">Runs entirely in your browser. Base64 uses TextEncoder so Unicode and emoji are handled correctly.</p><label>Input text</label><textarea id="tin" placeholder="Paste or type text here..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 bytes · <span id="cchars">0</span> Characters</div><label>Passphrase (for cipher)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 encode</button><button data-m="b64d">Base64 decode</button><button data-m="urle">URL encode</button><button data-m="urld">URL decode</button><button data-m="hexe">Hex encode</button><button data-m="hexd">Hex decode</button><button data-m="cye">Cipher (encrypt)</button><button data-m="cyd">Cipher (decrypt)</button></div><label>Output</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">Copy output</button><button id="tclear">Clear</button><button id="tswap">Output to input</button></div><p class="note">Simple XOR obfuscation - not a substitute for real end-to-end encryption.</p></section>
+<h2>What text encoding does (and does not) do</h2><p>Base64, URL-escaping and Hex are encodings: they rewrite bytes into a safe character set so text and binary data survive transport through email, URLs and JSON. They are fully reversible by anyone and provide no secrecy. Use them to move data safely, not to hide it.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Text"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">Text</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 bytes</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6-bit groups</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 pipeline: text becomes UTF-8 bytes, bytes are split into 6-bit groups, each group maps to one Base64 character.</figcaption></figure>
+<h2>How Base64 works</h2><p>Base64 is defined by RFC 4648. It groups the input into 6-bit chunks and maps each chunk to one of 64 characters (A-Z, a-z, 0-9, plus + and /), padding with = at the end. Three input bytes become four output characters, so the encoded text is about 33% larger than the input. The URL-safe variant replaces + and / with - and _ so the result is safe inside links.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_en.webp"><img src="/img/board_en.png" alt="Diagram comparing reversible encoding with encryption" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Encoding is reversible without a key; only a key-based cipher or true end-to-end encryption keeps text secret</figcaption></figure>
+<h2>Encoding is not encryption</h2><p>A common mistake is to treat Base64 as a way to protect data. It is not: anyone can decode it. The passphrase cipher in this tool adds a key, but a simple XOR is only light obfuscation and is not secure against a determined attacker. For real confidentiality, use a messenger with proper end-to-end encryption, such as Telegram Secret Chats, which use the MTProto protocol with 256-bit AES.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Encoding (reversible)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">Encoding (reversible)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">Passphrase cipher</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">End-to-end (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>Three levels: reversible encoding (no secret), a passphrase cipher (light obfuscation), and true end-to-end encryption.</figcaption></figure>
+<section class="i4data">
+<h2>Encoding constants &amp; messaging encryption (2026 snapshot)</h2>
+<p>Encoding values below are exact facts from RFC 4648 and MDN; the messaging figures are a 2026 estimate extrapolated from public baselines (Telegram's announced numbers and Wikipedia) - not first-hand measurement.</p>
+<table>
+<tr><th>What text encoding does </th><th>Encoding constants &amp; mes</th></tr><tr><td>Base64 size overhead</td><td>+33% (three input bytes become four characters), per RFC 4648 - exact</td></tr><tr><td>Base64 alphabet</td><td>64 characters: A-Z, a-z, 0-9, + and /; padding =; URL-safe variant uses - and _ (RFC 4648 §4-5) - exact</td></tr><tr><td>btoa / atob limit</td><td>work on Latin1 only; UTF-8 and emoji need TextEncoder / TextDecoder (MDN) - exact</td></tr><tr><td>Telegram monthly active users</td><td>surpassed 1 billion in March 2025 (Pavel Durov); 2026 estimate: continued growth</td></tr><tr><td>Telegram encryption</td><td>MTProto with 256-bit AES, 2048-bit RSA and Diffie-Hellman; end-to-end only in Secret Chats, not the default - per Wikipedia</td></tr><tr><td>Practical takeaway</td><td>use encoding to move text safely; use Secret Chats (or another end-to-end app) when you need secrecy</td></tr>
+</table>
+<p><small>Encoding constants are exact (RFC 4648 / MDN); messaging adoption is a 2026 estimate extrapolated from cited public baselines and changes over time.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>Is my text uploaded anywhere?</h3>
+<p>No. All encoding, decoding and the cipher run in your browser with standard web APIs; your text never leaves your device.</p>
+<h3>Does Base64 encrypt my data?</h3>
+<p>No. Base64 is an encoding, not encryption - anyone can decode it. It only makes bytes safe to transport, it does not keep them secret.</p>
+<h3>Why does Base64 of emoji or Chinese look different from other tools?</h3>
+<p>Because this tool encodes the correct UTF-8 bytes via TextEncoder. Tools that call btoa() directly fail or corrupt characters above Latin1.</p>
+<h3>What is the difference between URL encoding and Base64?</h3>
+<p>URL encoding (encodeURIComponent) escapes characters that are unsafe in a URL using % sequences; Base64 rewrites raw bytes into a 64-character alphabet. They solve different transport problems.</p>
+<h3>Is the passphrase cipher secure?</h3>
+<p>No. It is a simple XOR for light obfuscation only. For real confidentiality use a proper end-to-end encrypted messenger such as Telegram Secret Chats.</p>
+<h3>What is the = at the end of Base64?</h3>
+<p>It is padding. Base64 works in blocks of four characters; = fills the last block when the input length is not a multiple of three bytes.</p>
+</div>
+<div class="related"><h2>Get Telegram</h2><p>Telegram is an encrypted messaging app with Secret Chats for end-to-end encryption. Download it for your platform:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - all-platform download</a></p></div>
+<div class="sources"><h2>References</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 in JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Compiled by Ye Fan from RFC 4648, MDN Web Docs and Wikipedia. For reference only; all encoding and the cipher run locally in your browser.<br><a href="/about-yefan/" rel="author">About the author: Ye Fan</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "Simple XOR obfuscation - not a substitute for real end-to-end encryption.", "clear": "Clear", "copy": "Copy output", "err_decode": "Decode error - check the input.", "l_bytes": "UTF-8 bytes", "l_chars": "Characters", "l_in": "Input text", "l_out": "Output", "l_pass": "Passphrase (for cipher)", "m_b64d": "Base64 decode", "m_b64e": "Base64 encode", "m_cyd": "Cipher (decrypt)", "m_cye": "Cipher (encrypt)", "m_hexd": "Hex decode", "m_hexe": "Hex encode", "m_urld": "URL decode", "m_urle": "URL encode", "ph_in": "Paste or type text here...", "run": "Convert", "swap": "Output to input"};</script>
+<script src="/app.js"></script>
+</body></html>
