@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="my"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex ကုဒ်ဒါနှင့် ရိုးရှင်းသော Cipher - အခမဲ့ အွန်လိုင်း စာသားတူးလ်</title>
+<meta name="description" content="အခမဲ့ သုံးစွဲသူဘက်မှ စာသားတူးလ်- Base64၊ URL နှင့် Hex မှန်ကန်သော UTF-8 ကိုင်တွယ်မှု၊ တိုက်ရိုက် ဘိုက်နှင့် စာလုံးရေတွက်မှုများ၊ ရိုးရှင်းသော စကားဝှက်စာဝှက်ဖြင့် ကုဒ်/ကုဒ်။ ဘာမှမတင်ပါဘူး။">
+<link rel="canonical" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex ကုဒ်ဒါနှင့် ရိုးရှင်းသော Cipher - အခမဲ့ အွန်လိုင်း စာသားတူးလ်"><meta property="og:description" content="အခမဲ့ သုံးစွဲသူဘက်မှ စာသားတူးလ်- Base64၊ URL နှင့် Hex မှန်ကန်သော UTF-8 ကိုင်တွယ်မှု၊ တိုက်ရိုက် ဘိုက်နှင့် စာလုံးရေတွက်မှုများ၊ ရိုးရှင်းသော စကားဝှက်စာဝှက်ဖြင့် ကုဒ်/ကုဒ်။ ဘာမှမတင်ပါဘူး။"><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/my/"><meta property="og:image" content="https://africa48la.github.io/img/cover_my.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex ကုဒ်ဒါနှင့် ရိုးရှင်းသော Cipher - အခမဲ့ အွန်လိုင်း စာသားတူးလ်",
+   "url": "https://africa48la.github.io/my/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "my",
+   "description": "အခမဲ့ သုံးစွဲသူဘက်မှ စာသားတူးလ်- Base64၊ URL နှင့် Hex မှန်ကန်သော UTF-8 ကိုင်တွယ်မှု၊ တိုက်ရိုက် ဘိုက်နှင့် စာလုံးရေတွက်မှုများ၊ ရိုးရှင်းသော စကားဝှက်စာဝှက်ဖြင့် ကုဒ်/ကုဒ်။ ဘာမှမတင်ပါဘူး။",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "my",
+   "url": "https://africa48la.github.io/my/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ကျွန်ုပ်၏စာသားကို မည်သည့်နေရာတွင်မဆို အပ်လုဒ်လုပ်ထားပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "နံပါတ်- စံဝဘ် API များဖြင့် သင့်ဘရောက်ဆာတွင် ကုဒ်သွင်းခြင်း၊ ကုဒ်ဆွဲခြင်းနှင့် လျှို့ဝှက်စာဝှက်အားလုံး လုပ်ဆောင်သည်။ သင်၏ စာသားသည် သင့်စက်ကို ဘယ်တော့မှ မထွက်ပါ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 သည် ကျွန်ုပ်၏ဒေတာကို စာဝှက်ထားပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "နံပါတ် Base64 သည် ကုဒ်နံပါတ်၊ ကုဒ်ဝှက်ခြင်းမဟုတ်ဘဲ၊ မည်သူမဆို ၎င်းကို ကုဒ်လုပ်နိုင်သည်။ ၎င်းသည် ဘိုက်များကို သယ်ယူပို့ဆောင်ရန်အတွက်သာ ဘေးကင်းစေကာ ၎င်းတို့ကို လျှို့ဝှက်ထားခြင်းမရှိပေ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "အီမိုဂျီ သို့မဟုတ် တရုတ်၏ Base64 သည် အခြားကိရိယာများနှင့် အဘယ်ကြောင့် ကွာခြားသနည်း။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ဤကိရိယာသည် မှန်ကန်သော UTF-8 ဘိုက်များကို TextEncoder မှတစ်ဆင့် ကုဒ်လုပ်သောကြောင့်ဖြစ်သည်။ btoa() ဟုခေါ်သော တူးလ်များသည် Latin1 အထက်ရှိ စာလုံးများ တိုက်ရိုက်ပျက်ကွက် သို့မဟုတ် ပျက်စီးနေသည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "URL ကုဒ်နံပါတ်နှင့် Base64 အကြား ကွာခြားချက်ကား အဘယ်နည်း။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "URL ကုဒ်ပြောင်းခြင်း (encodeURIComponent) သည် % sequences ကို အသုံးပြု၍ URL တွင် မလုံခြုံသော ဇာတ်ကောင်များမှ လွတ်မြောက်သည်။ Base64 သည် အကြမ်းဘိုက်များကို အက္ခရာ 64 လုံးဖြင့် ပြန်ရေးသည်။ သယ်ယူပို့ဆောင်ရေးပြဿနာများကို အမျိုးမျိုးဖြေရှင်းကြသည်။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "စကားဝှက်စာဝှက်သည် လုံခြုံပါသလား။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "နံပါတ်၊ ၎င်းသည် အလင်းမှုန်ဝါးဝါးအတွက်သာ ရိုးရှင်းသော XOR ဖြစ်သည်။ စစ်မှန်သောလျှို့ဝှက်ချက်အတွက် Telegram Secret Chats ကဲ့သို့သော သင့်လျော်သော အဆုံးမှအဆုံး ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်ကို အသုံးပြုပါ။"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 ရဲ့အဆုံးမှာ = ကဘာလဲ။",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "၎င်းသည် padding ဖြစ်သည်။ Base64 သည် စာလုံးလေးလုံးပါသော အကွက်များတွင် အလုပ်လုပ်သည်။ = ထည့်သွင်းမှု အရှည်သည် သုံးဘိုက်၏ အကြိမ်ရေမဟုတ်သောအခါ နောက်ဆုံးပိတ်ကို ဖြည့်ပေးသည်။"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ဘာသာစကား: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <strong>မြန်မာ</strong></nav>
+<h1>Base64 / URL / Hex ကုဒ်ဒါနှင့် ရိုးရှင်းသော စာဝှက်စနစ်</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_my.webp"><img src="/img/cover_my.png" alt="Base64 URL Hex စာသားကုဒ်နံပါတ်နှင့် ရိုးရှင်းသော စာဝှက်ကိရိယာ သရုပ်ဖော်ပုံ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex ကုဒ်နံပါတ်နှင့် ရိုးရှင်းသော စကားဝှက်စာဝှက်တစ်ခု - client-side အားလုံး</figcaption></figure>
+<p>Base64၊ URL-escaped သို့မဟုတ် Hex အဖြစ် စာဝှက်ရန် သို့မဟုတ် ကုဒ်လုပ်ရန် မည်သည့်စာသားကိုမဆို ကူးထည့်ကာ ၎င်း၏ UTF-8 bytes နှင့် စာလုံးများကို ရေတွက်ရန်။ လျင်မြန်စွာရှုပ်ထွေးမှုအတွက် ရိုးရှင်းသော စကားဝှက်စာဝှက်တစ်ခုလည်းရှိသည်။ အရာအားလုံးသည် သင့်ဘရောက်ဆာတွင် အလုပ်လုပ်သည်။ သင့်စာသားကို ဘယ်တော့မှ မတင်ပါဘူး။</p>
+<section class="tool"><h2>ကုဒ်၊ ကုဒ်နှင့် ရေတွက်ပါ။</h2><p class="note">သင့်ဘရောက်ဆာတွင် လုံး၀အလုပ်လုပ်သည်။ Base64 သည် TextEncoder ကိုအသုံးပြုထားသောကြောင့် ယူနီကုဒ်နှင့် အီမိုဂျီများကို မှန်ကန်စွာကိုင်တွယ်ပါသည်။</p><label>စာသားထည့်ပါ။</label><textarea id="tin" placeholder="စာသားကို ဤနေရာတွင် ကူးထည့်ပါ သို့မဟုတ် ရိုက်ထည့်ပါ..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 ဘိုက်များ · <span id="cchars">0</span> ဇာတ်ကောင်များ</div><label>စကားဝှက် (cipher အတွက်)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 ကုဒ်နံပါတ်</button><button data-m="b64d">Base64 ကုဒ်</button><button data-m="urle">URL ကုဒ်နံပါတ်</button><button data-m="urld">URL ကုဒ်</button><button data-m="hexe">Hex ကုဒ်နံပါတ်</button><button data-m="hexd">Hex ကုဒ်</button><button data-m="cye">Cipher (ကုဒ်ဝှက်)</button><button data-m="cyd">Cipher (ကုဒ်ဝှက်)</button></div><label>အထွက်</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">အထွက်ကို ကူးယူပါ။</button><button id="tclear">ရှင်းပါတယ်။</button><button id="tswap">ထည့်သွင်းရန် အထွက်</button></div><p class="note">ရိုးရှင်းသော XOR obfuscation - တကယ့် end-to-end ကုဒ်ဝှက်ခြင်းအတွက် အစားထိုးမဟုတ်ပါ။</p></section>
+<h2>စာသားကုဒ်ကုဒ်သည် မည်သည့်အရာ (နှင့်မဆိုင်ပါ) လုပ်ဆောင်သနည်း။</h2><p>Base64၊ URL-escaping နှင့် Hex တို့သည် ကုဒ်နံပါတ်များဖြစ်သည်- ၎င်းတို့သည် ဘိုက်များကို ဘေးကင်းသော အက္ခရာအတွဲအဖြစ် ပြန်လည်ရေးကာ အီးမေးလ်၊ URLs နှင့် JSON မှတဆင့် စာသားနှင့် ဒွိဒေတာများကို သယ်ဆောင်ရှင်သန်နိုင်စေပါသည်။ ၎င်းတို့ကို မည်သူမဆို အပြည့်အဝ နောက်ပြန်လှည့်၍ လျှို့ဝှက်ထားခြင်းမရှိပေ။ ၎င်းတို့ကို ဝှက်ထားရန်မဟုတ်ဘဲ ဒေတာများကို ဘေးကင်းစွာ ရွှေ့ပြောင်းရန် ၎င်းတို့ကို အသုံးပြုပါ။</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="စာသား"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">စာသား</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 ဘိုက်များ</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6-bit အုပ်စုများ</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 ပိုက်လိုင်း- စာသားသည် UTF-8 ဘိုက်များဖြစ်လာသည်၊ ဘိုက်များကို 6-ဘစ်အုပ်စုများအဖြစ် ခွဲကာ၊ အုပ်စုတစ်ခုစီသည် Base64 စာလုံးတစ်လုံးသို့ မြေပုံဆွဲသည်။</figcaption></figure>
+<h2>Base64 အလုပ်လုပ်ပုံ</h2><p>Base64 ကို RFC 4648 က သတ်မှတ်သည်။ ၎င်းသည် input ကို 6-bit အတုံးများအဖြစ် အုပ်စုဖွဲ့ပြီး အတုံးတစ်ခုစီကို အက္ခရာ 64 လုံး (A-Z၊ a-z၊ 0-9၊ အပေါင်း + နှင့် /)၊ အဆုံးတွင် padding with = ဖြစ်သည်။ အဝင်ဘိုက်သုံးခုသည် အထွက်အက္ခရာလေးလုံးဖြစ်လာသည်၊ ထို့ကြောင့် ကုဒ်လုပ်ထားသောစာသားသည် ထည့်သွင်းမှုထက် 33% ခန့် ပိုကြီးသည်။ URL-safe မူကွဲသည် + နှင့် / ဖြင့် - နှင့် _ ကိုအစားထိုးသောကြောင့် ရလဒ်သည် လင့်ခ်များအတွင်း ဘေးကင်းပါသည်။</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_my.webp"><img src="/img/board_my.png" alt="ကုဒ်ဝှက်စနစ်ဖြင့် ပြောင်းပြန်လှန်နိုင်သော ကုဒ်နံပါတ်ကို နှိုင်းယှဉ်သည့် ပုံ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ကုဒ်နံပါတ်သည် သော့မပါဘဲ နောက်ပြန်လှည့်နိုင်သည်။ သော့အခြေခံ cipher သို့မဟုတ် စစ်မှန်သော အဆုံးမှ အဆုံး ကုဒ်ဝှက်စနစ်ကသာ စာသားကို လျှို့ဝှက်ထားသည်။</figcaption></figure>
+<h2>ကုဒ်သွင်းခြင်းသည် ကုဒ်ဝှက်ခြင်းမဟုတ်ပါ။</h2><p>အဖြစ်များသောအမှားမှာ Base64 ကိုဒေတာကိုကာကွယ်ရန်နည်းလမ်းတစ်ခုအဖြစ်ဆက်ဆံခြင်းဖြစ်သည်။ မဟုတ်ပါ- မည်သူမဆို ၎င်းကို ကုဒ်လုပ်နိုင်ပါသည်။ ဤကိရိယာရှိ စကားဝှက်စာဝှက်သည် သော့တစ်ခုကို ပေါင်းထည့်သည်၊ သို့သော် ရိုးရိုး XOR သည် ပေါ့ပါးသော ရှုပ်ထွေးမှုများသာဖြစ်ပြီး သတ်သတ်မှတ်မှတ် တိုက်ခိုက်သူအပေါ် မလုံခြုံပါ။ စစ်မှန်သောလျှို့ဝှက်ချက်အတွက်၊ 256-bit AES နှင့် MTProto ပရိုတိုကောကို အသုံးပြုသည့် Telegram Secret Chats ကဲ့သို့သော သင့်လျော်သော အဆုံးမှအဆုံး ကုဒ်ဝှက်စနစ်ပါရှိသော messenger ကို အသုံးပြုပါ။</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ကုဒ်သွင်းခြင်း (နောက်ပြန်လှည့်နိုင်သည်)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">ကုဒ်သွင်းခြင်း (နောက်ပြန်လှည့်နိုင်သည်)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">စကားဝှက်စာဝှက်</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">အဆုံးမှ အဆုံး (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>အဆင့်သုံးဆင့်- နောက်ပြန်လှည့်နိုင်သော ကုဒ်နံပါတ် (လျှို့ဝှက်ချက်မရှိ)၊ စကားဝှက်စာဝှက်တစ်ခု (အလင်းရှုပ်ထွေးမှု) နှင့် စစ်မှန်သော အဆုံးမှအဆုံး ကုဒ်ဝှက်စနစ်။</figcaption></figure>
+<section class="i4data">
+<h2>ကိန်းသေများကို ကုဒ်သွင်းခြင်းနှင့် စာတိုပေးပို့ခြင်း ကုဒ်ဝှက်ခြင်း (2026 လျှပ်တစ်ပြက်)</h2>
+<p>အောက်ဖော်ပြပါ ကုဒ်နံပါတ်တန်ဖိုးများသည် RFC 4648 နှင့် MDN တို့မှ အတိအကျ အချက်အလက်များဖြစ်သည်။ စာတိုပေးပို့ခြင်းဆိုင်ရာ ကိန်းဂဏန်းများသည် အများသူငှာ အခြေခံမျဥ်းများ (Telegram ၏ ကြေငြာထားသော နံပါတ်များနှင့် Wikipedia) မှ ပေါင်းစပ်ထားသော 2026 ခန့်မှန်းချက်ဖြစ်သည် - ကိုယ်တိုင်လက်ဖြင့် တိုင်းတာခြင်းမဟုတ်ပါ။</p>
+<table>
+<tr><th>စာသားကုဒ်ကုဒ်သည် မည်သည့်</th><th>ကိန်းသေများကို ကုဒ်သွင်း</th></tr><tr><td>Base64 ဆိုက်ပေါ်ကနေ</td><td>RFC 4648 နှုန်း - အတိအကျအားဖြင့် စာလုံးသုံးလုံးသည် ဘိုက်လေးလုံးဖြစ်လာသည်။</td></tr><tr><td>Base64 အက္ခရာ</td><td>အက္ခရာ 64 လုံး- A-Z၊ a-z၊ 0-9၊ + နှင့် /; padding =; URL-ဘေးကင်းသောဗားရှင်းအသုံးပြုမှုများ - နှင့် _ (RFC 4648 §4-5) - အတိအကျ</td></tr><tr><td>btoa / atob ကန့်သတ်ချက်</td><td>Latin1 တွင်သာအလုပ်လုပ်သည်။ UTF-8 နှင့် အီမိုဂျီ TextEncoder / TextDecoder (MDN) - အတိအကျ လိုအပ်သည်</td></tr><tr><td>Telegram လစဉ်တက်ကြွအသုံးပြုသူများ</td><td>မတ်လ 2025 တွင် 1 ဘီလီယံကျော် (Pavel Durov); 2026 ခန့်မှန်းချက်- ဆက်လက်တိုးတက်မှု</td></tr><tr><td>Telegram ကုဒ်ဝှက်ခြင်း</td><td>256-bit AES၊ 2048-bit RSA နှင့် Diffie-Hellman ဖြင့် MTProto၊ မူရင်းအတိုင်းမဟုတ်ဘဲ Secret Chat တွင်သာ အဆုံးမှအဆုံးသို့ - Wikipedia အလိုက်</td></tr><tr><td>လက်တွေ့ သယ်ယူသွားပါ။</td><td>စာသားကို ဘေးကင်းစွာ ရွှေ့ရန် ကုဒ်နံပါတ်ကို အသုံးပြုပါ။ သင်လျှို့ဝှက်ချက်လိုအပ်သောအခါ Secret Chats (သို့မဟုတ်အခြားအဆုံးမှအဆုံးအက်ပ်) ကိုသုံးပါ။</td></tr>
+</table>
+<p><small>ကုဒ်ပြောင်းကိန်းသေများသည် အတိအကျဖြစ်သည် (RFC 4648 / MDN); စာတိုပေးပို့ခြင်းဆိုင်ရာ မွေးစားမှုသည် အချိန်နှင့်အမျှ ပြောင်းလဲမှုများကို ကိုးကားထားသော အများသူငှာ အခြေခံအချက်များနှင့် ပေါင်းစပ်ထားသော 2026 ခန့်မှန်းချက်ဖြစ်သည်။</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>ကျွန်ုပ်၏စာသားကို မည်သည့်နေရာတွင်မဆို အပ်လုဒ်လုပ်ထားပါသလား။</h3>
+<p>နံပါတ်- စံဝဘ် API များဖြင့် သင့်ဘရောက်ဆာတွင် ကုဒ်သွင်းခြင်း၊ ကုဒ်ဆွဲခြင်းနှင့် လျှို့ဝှက်စာဝှက်အားလုံး လုပ်ဆောင်သည်။ သင်၏ စာသားသည် သင့်စက်ကို ဘယ်တော့မှ မထွက်ပါ။</p>
+<h3>Base64 သည် ကျွန်ုပ်၏ဒေတာကို စာဝှက်ထားပါသလား။</h3>
+<p>နံပါတ် Base64 သည် ကုဒ်နံပါတ်၊ ကုဒ်ဝှက်ခြင်းမဟုတ်ဘဲ၊ မည်သူမဆို ၎င်းကို ကုဒ်လုပ်နိုင်သည်။ ၎င်းသည် ဘိုက်များကို သယ်ယူပို့ဆောင်ရန်အတွက်သာ ဘေးကင်းစေကာ ၎င်းတို့ကို လျှို့ဝှက်ထားခြင်းမရှိပေ။</p>
+<h3>အီမိုဂျီ သို့မဟုတ် တရုတ်၏ Base64 သည် အခြားကိရိယာများနှင့် အဘယ်ကြောင့် ကွာခြားသနည်း။</h3>
+<p>ဤကိရိယာသည် မှန်ကန်သော UTF-8 ဘိုက်များကို TextEncoder မှတစ်ဆင့် ကုဒ်လုပ်သောကြောင့်ဖြစ်သည်။ btoa() ဟုခေါ်သော တူးလ်များသည် Latin1 အထက်ရှိ စာလုံးများ တိုက်ရိုက်ပျက်ကွက် သို့မဟုတ် ပျက်စီးနေသည်။</p>
+<h3>URL ကုဒ်နံပါတ်နှင့် Base64 အကြား ကွာခြားချက်ကား အဘယ်နည်း။</h3>
+<p>URL ကုဒ်ပြောင်းခြင်း (encodeURIComponent) သည် % sequences ကို အသုံးပြု၍ URL တွင် မလုံခြုံသော ဇာတ်ကောင်များမှ လွတ်မြောက်သည်။ Base64 သည် အကြမ်းဘိုက်များကို အက္ခရာ 64 လုံးဖြင့် ပြန်ရေးသည်။ သယ်ယူပို့ဆောင်ရေးပြဿနာများကို အမျိုးမျိုးဖြေရှင်းကြသည်။</p>
+<h3>စကားဝှက်စာဝှက်သည် လုံခြုံပါသလား။</h3>
+<p>နံပါတ်၊ ၎င်းသည် အလင်းမှုန်ဝါးဝါးအတွက်သာ ရိုးရှင်းသော XOR ဖြစ်သည်။ စစ်မှန်သောလျှို့ဝှက်ချက်အတွက် Telegram Secret Chats ကဲ့သို့သော သင့်လျော်သော အဆုံးမှအဆုံး ကုဒ်ဝှက်ထားသော မက်ဆေ့ချ်ကို အသုံးပြုပါ။</p>
+<h3>Base64 ရဲ့အဆုံးမှာ = ကဘာလဲ။</h3>
+<p>၎င်းသည် padding ဖြစ်သည်။ Base64 သည် စာလုံးလေးလုံးပါသော အကွက်များတွင် အလုပ်လုပ်သည်။ = ထည့်သွင်းမှု အရှည်သည် သုံးဘိုက်၏ အကြိမ်ရေမဟုတ်သောအခါ နောက်ဆုံးပိတ်ကို ဖြည့်ပေးသည်။</p>
+</div>
+<div class="related"><h2>Telegram ရယူပါ။</h2><p>Telegram သည် အစမှအဆုံး ကုဒ်ဝှက်ခြင်းအတွက် Secret Chats ဖြင့် ကုဒ်ဝှက်ထားသော စာတိုပေးပို့ခြင်းအက်ပ်တစ်ခုဖြစ်သည်။ သင့်ပလပ်ဖောင်းအတွက် ၎င်းကို ဒေါင်းလုဒ်လုပ်ပါ-</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - အားလုံး-ပလပ်ဖောင်းဒေါင်းလုဒ်</a></p></div>
+<div class="sources"><h2>ကိုးကား</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - ဝီကီပီးဒီးယား (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">JavaScript တွင် MDN - Base64</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - ဝီကီပီးဒီးယား</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Ye Fan မှ RFC 4648၊ MDN Web Docs နှင့် Wikipedia မှ ပြုစုထားသည်။ အကိုးအကားအတွက်သာ; encoding နှင့် cipher အားလုံးကို သင့်ဘရောက်ဆာတွင် စက်တွင်း၌ လုပ်ဆောင်သည်။<br><a href="/about-yefan/" rel="author">ရေးသားသူ- Ye Fan အကြောင်း</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "ရိုးရှင်းသော XOR obfuscation - တကယ့် end-to-end ကုဒ်ဝှက်ခြင်းအတွက် အစားထိုးမဟုတ်ပါ။", "clear": "ရှင်းပါတယ်။", "copy": "အထွက်ကို ကူးယူပါ။", "err_decode": "ကုဒ်အမှား - ထည့်သွင်းမှုကို စစ်ဆေးပါ။", "l_bytes": "UTF-8 ဘိုက်များ", "l_chars": "ဇာတ်ကောင်များ", "l_in": "စာသားထည့်ပါ။", "l_out": "အထွက်", "l_pass": "စကားဝှက် (cipher အတွက်)", "m_b64d": "Base64 ကုဒ်", "m_b64e": "Base64 ကုဒ်နံပါတ်", "m_cyd": "Cipher (ကုဒ်ဝှက်)", "m_cye": "Cipher (ကုဒ်ဝှက်)", "m_hexd": "Hex ကုဒ်", "m_hexe": "Hex ကုဒ်နံပါတ်", "m_urld": "URL ကုဒ်", "m_urle": "URL ကုဒ်နံပါတ်", "ph_in": "စာသားကို ဤနေရာတွင် ကူးထည့်ပါ သို့မဟုတ် ရိုက်ထည့်ပါ...", "run": "ပြောင်းပါ။", "swap": "ထည့်သွင်းရန် အထွက်"};</script>
+<script src="/app.js"></script>
+</body></html>
