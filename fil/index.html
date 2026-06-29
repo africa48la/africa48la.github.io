@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="fil"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex Encoder at Simple Cipher - libreng online na tool sa text</title>
+<meta name="description" content="Libreng tool sa text sa panig ng kliyente: Base64, URL at Hex na mag-encode/mag-decode gamit ang tamang paghawak ng UTF-8, live byte at bilang ng character, at isang simpleng passphrase cipher. Walang na-upload.">
+<link rel="canonical" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex Encoder at Simple Cipher - libreng online na tool sa text"><meta property="og:description" content="Libreng tool sa text sa panig ng kliyente: Base64, URL at Hex na mag-encode/mag-decode gamit ang tamang paghawak ng UTF-8, live byte at bilang ng character, at isang simpleng passphrase cipher. Walang na-upload."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/fil/"><meta property="og:image" content="https://africa48la.github.io/img/cover_fil.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex Encoder at Simple Cipher - libreng online na tool sa text",
+   "url": "https://africa48la.github.io/fil/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "fil",
+   "description": "Libreng tool sa text sa panig ng kliyente: Base64, URL at Hex na mag-encode/mag-decode gamit ang tamang paghawak ng UTF-8, live byte at bilang ng character, at isang simpleng passphrase cipher. Walang na-upload.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "fil",
+   "url": "https://africa48la.github.io/fil/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Na-upload ba ang text ko kahit saan?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi. Lahat ng encoding, decoding at cipher ay tumatakbo sa iyong browser gamit ang mga karaniwang web API; hindi umaalis ang iyong text sa iyong device."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ini-encrypt ba ng Base64 ang aking data?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi. Ang Base64 ay isang encoding, hindi encryption - kahit sino ay maaaring mag-decode nito. Ginagawa lang nitong ligtas na dalhin ang mga byte, hindi nito inililihim ang mga ito."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Bakit iba ang hitsura ng Base64 ng emoji o Chinese sa ibang mga tool?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Dahil ang tool na ito ay nag-encode ng tamang UTF-8 byte sa pamamagitan ng TextEncoder. Ang mga tool na tumatawag sa btoa() ay direktang nabigo o sira ang mga character sa itaas ng Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ano ang pagkakaiba sa pagitan ng URL encoding at Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ang URL encoding (encodeURIComponent) ay tumatakas sa mga character na hindi ligtas sa isang URL gamit ang % sequence; Ang Base64 ay nagre-rewrite ng mga raw byte sa isang 64-character na alpabeto. Nilulutas nila ang iba't ibang mga problema sa transportasyon."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Secure ba ang passphrase cipher?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Hindi. Ito ay isang simpleng XOR para sa light obfuscation lamang. Para sa tunay na pagiging kumpidensyal gumamit ng wastong end-to-end na naka-encrypt na messenger gaya ng Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Ano ang = sa dulo ng Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ito ay padding. Gumagana ang Base64 sa mga bloke ng apat na character; = pinupunan ang huling bloke kapag ang haba ng input ay hindi maramihang tatlong byte."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Wika: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <strong>Filipino</strong> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Base64 / URL / Hex Encoder at Simple Cipher</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_fil.webp"><img src="/img/cover_fil.png" alt="Base64 URL Hex text encoder at simpleng cipher tool na ilustrasyon" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex encoder at isang simpleng passphrase cipher - lahat ng client-side</figcaption></figure>
+<p>Mag-paste ng anumang text para i-encode o i-decode ito bilang Base64, URL-escaped, o Hex, at bilangin ang UTF-8 byte at character nito. Mayroon ding simpleng passphrase cipher para sa mabilis na obfuscation. Lahat ay tumatakbo sa iyong browser; ang iyong teksto ay hindi kailanman na-upload.</p>
+<section class="tool"><h2>I-encode, i-decode at bilangin</h2><p class="note">Ganap na tumatakbo sa iyong browser. Ang Base64 ay gumagamit ng TextEncoder kaya ang Unicode at emoji ay pinangangasiwaan nang tama.</p><label>Mag-input ng text</label><textarea id="tin" placeholder="I-paste o i-type ang text dito..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 byte · <span id="cchars">0</span> Mga tauhan</div><label>Passphrase (para sa cipher)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 encode</button><button data-m="b64d">Base64 decode</button><button data-m="urle">URL encode</button><button data-m="urld">URL decode</button><button data-m="hexe">Hex encode</button><button data-m="hexd">Hex decode</button><button data-m="cye">Cipher (i-encrypt)</button><button data-m="cyd">Cipher (decrypt)</button></div><label>Output</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">Kopyahin ang output</button><button id="tclear">Maaliwalas</button><button id="tswap">Output sa input</button></div><p class="note">Simpleng XOR obfuscation - hindi isang kapalit para sa tunay na end-to-end na pag-encrypt.</p></section>
+<h2>Ano ang nagagawa (at hindi) nagagawa ng text encoding</h2><p>Ang Base64, URL-escaping at Hex ay mga encoding: nagre-rewrite sila ng mga byte sa isang ligtas na set ng character upang ang text at binary na data ay mabuhay sa transportasyon sa pamamagitan ng email, URLs at JSON. Ang mga ito ay ganap na nababaligtad ng sinuman at hindi nagbibigay ng lihim. Gamitin ang mga ito upang ilipat ang data nang ligtas, hindi para itago ito.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Text"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">Text</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 byte</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6-bit na mga pangkat</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 pipeline: ang text ay nagiging UTF-8 byte, ang mga byte ay nahahati sa 6-bit na mga grupo, ang bawat pangkat ay nagmamapa sa isang Base64 na character.</figcaption></figure>
+<h2>Paano gumagana ang Base64</h2><p>Ang Base64 ay tinukoy ng RFC 4648. Pinagpangkat-pangkat nito ang input sa 6-bit na mga chunks at ipinamapa ang bawat tipak sa isa sa 64 na character (A-Z, a-z, 0-9, plus + at /), padding na may = sa dulo. Ang tatlong input byte ay nagiging apat na output character, kaya ang naka-encode na text ay humigit-kumulang 33% na mas malaki kaysa sa input. Pinapalitan ng URL-safe na variant ang + at / ng - at _ kaya ang resulta ay ligtas sa loob ng mga link.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_fil.webp"><img src="/img/board_fil.png" alt="Diagram na naghahambing ng reversible encoding sa encryption" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Ang pag-encode ay nababaligtad nang walang susi; tanging isang key-based cipher o totoong end-to-end encryption ang nagpapanatili ng lihim ng text</figcaption></figure>
+<h2>Ang pag-encode ay hindi pag-encrypt</h2><p>Ang isang karaniwang pagkakamali ay ang pagtrato sa Base64 bilang isang paraan upang maprotektahan ang data. Ito ay hindi: kahit sino ay maaaring mag-decode nito. Ang passphrase cipher sa tool na ito ay nagdaragdag ng isang susi, ngunit ang isang simpleng XOR ay isang light obfuscation lamang at hindi secure laban sa isang determinadong umaatake. Para sa tunay na pagiging kumpidensyal, gumamit ng messenger na may wastong end-to-end na pag-encrypt, gaya ng Telegram Secret Chats, na gumagamit ng MTProto protocol na may 256-bit na AES.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Encoding (reversible)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">Encoding (reversible)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">Passphrase cipher</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">End-to-end (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>Tatlong antas: reversible encoding (walang lihim), isang passphrase cipher (light obfuscation), at totoong end-to-end na pag-encrypt.</figcaption></figure>
+<section class="i4data">
+<h2>Mga constant sa pag-encode at pag-encrypt ng pagmemensahe (2026 snapshot)</h2>
+<p>Ang mga halaga ng pag-encode sa ibaba ay eksaktong mga katotohanan mula sa RFC 4648 at MDN; ang mga numero sa pagmemensahe ay isang pagtatantya noong 2026 na kinuha mula sa mga pampublikong baseline (mga inihayag na numero ng Telegram at Wikipedia) - hindi ang unang-kamay na pagsukat.</p>
+<table>
+<tr><th>Ano ang nagagawa (at hin</th><th>Mga constant sa pag-enco</th></tr><tr><td>Base64 laki sa itaas</td><td>+33% (tatlong input byte ay naging apat na character), bawat RFC 4648 - eksakto</td></tr><tr><td>Base64 alpabeto</td><td>64 na character: A-Z, a-z, 0-9, + at /; padding =; URL-safe na mga gamit ng variant - at _ (RFC 4648 §4-5) - eksakto</td></tr><tr><td>btoa / atob na limitasyon</td><td>magtrabaho sa Latin1 lamang; Kailangan ng UTF-8 at emoji ng TextEncoder / TextDecoder (MDN) - eksakto</td></tr><tr><td>Telegram buwanang aktibong user</td><td>lumampas sa 1 bilyon noong Marso 2025 (Pavel Durov); 2026 pagtatantya: patuloy na paglago</td></tr><tr><td>Telegram encryption</td><td>MTProto na may 256-bit AES, 2048-bit RSA at Diffie-Hellman; end-to-end lang sa Secret Chats, hindi ang default - bawat Wikipedia</td></tr><tr><td>Praktikal na takeaway</td><td>gumamit ng encoding para ligtas na ilipat ang text; gumamit ng Secret Chats (o isa pang end-to-end na app) kapag kailangan mo ng lihim</td></tr>
+</table>
+<p><small>Ang mga constant ng pag-encode ay eksakto (RFC 4648 / MDN); Ang pag-aampon ng pagmemensahe ay isang pagtatantya noong 2026 na kinuha mula sa mga binanggit na pampublikong baseline at mga pagbabago sa paglipas ng panahon.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>Na-upload ba ang text ko kahit saan?</h3>
+<p>Hindi. Lahat ng encoding, decoding at cipher ay tumatakbo sa iyong browser gamit ang mga karaniwang web API; hindi umaalis ang iyong text sa iyong device.</p>
+<h3>Ini-encrypt ba ng Base64 ang aking data?</h3>
+<p>Hindi. Ang Base64 ay isang encoding, hindi encryption - kahit sino ay maaaring mag-decode nito. Ginagawa lang nitong ligtas na dalhin ang mga byte, hindi nito inililihim ang mga ito.</p>
+<h3>Bakit iba ang hitsura ng Base64 ng emoji o Chinese sa ibang mga tool?</h3>
+<p>Dahil ang tool na ito ay nag-encode ng tamang UTF-8 byte sa pamamagitan ng TextEncoder. Ang mga tool na tumatawag sa btoa() ay direktang nabigo o sira ang mga character sa itaas ng Latin1.</p>
+<h3>Ano ang pagkakaiba sa pagitan ng URL encoding at Base64?</h3>
+<p>Ang URL encoding (encodeURIComponent) ay tumatakas sa mga character na hindi ligtas sa isang URL gamit ang % sequence; Ang Base64 ay nagre-rewrite ng mga raw byte sa isang 64-character na alpabeto. Nilulutas nila ang iba't ibang mga problema sa transportasyon.</p>
+<h3>Secure ba ang passphrase cipher?</h3>
+<p>Hindi. Ito ay isang simpleng XOR para sa light obfuscation lamang. Para sa tunay na pagiging kumpidensyal gumamit ng wastong end-to-end na naka-encrypt na messenger gaya ng Telegram Secret Chats.</p>
+<h3>Ano ang = sa dulo ng Base64?</h3>
+<p>Ito ay padding. Gumagana ang Base64 sa mga bloke ng apat na character; = pinupunan ang huling bloke kapag ang haba ng input ay hindi maramihang tatlong byte.</p>
+</div>
+<div class="related"><h2>Kunin ang Telegram</h2><p>Ang Telegram ay isang naka-encrypt na messaging app na may Secret Chats para sa end-to-end na pag-encrypt. I-download ito para sa iyong platform:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - pag-download sa lahat ng platform</a></p></div>
+<div class="sources"><h2>Mga sanggunian</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 sa JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Inipon ni Ye Fan mula sa RFC 4648, MDN Web Docs at Wikipedia. Para sa sanggunian lamang; lahat ng encoding at cipher ay tumatakbo nang lokal sa iyong browser.<br><a href="/about-yefan/" rel="author">Tungkol sa may-akda: Ye Fan</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "Simpleng XOR obfuscation - hindi isang kapalit para sa tunay na end-to-end na pag-encrypt.", "clear": "Maaliwalas", "copy": "Kopyahin ang output", "err_decode": "Error sa pag-decode - suriin ang input.", "l_bytes": "UTF-8 byte", "l_chars": "Mga tauhan", "l_in": "Mag-input ng text", "l_out": "Output", "l_pass": "Passphrase (para sa cipher)", "m_b64d": "Base64 decode", "m_b64e": "Base64 encode", "m_cyd": "Cipher (decrypt)", "m_cye": "Cipher (i-encrypt)", "m_hexd": "Hex decode", "m_hexe": "Hex encode", "m_urld": "URL decode", "m_urle": "URL encode", "ph_in": "I-paste o i-type ang text dito...", "run": "Magbalik-loob", "swap": "Output sa input"};</script>
+<script src="/app.js"></script>
+</body></html>
