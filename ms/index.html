@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="ms"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pengekod Base64 / URL / Hex &amp; Sifir Mudah - alat teks dalam talian percuma</title>
+<meta name="description" content="Alat teks sebelah pelanggan percuma: Base64, URL dan Hex mengekod/menyahkod dengan pengendalian UTF-8 yang betul, kiraan bait langsung dan aksara serta sifir frasa laluan yang mudah. Tiada apa-apa yang dimuat naik.">
+<link rel="canonical" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Pengekod Base64 / URL / Hex &amp; Sifir Mudah - alat teks dalam talian percuma"><meta property="og:description" content="Alat teks sebelah pelanggan percuma: Base64, URL dan Hex mengekod/menyahkod dengan pengendalian UTF-8 yang betul, kiraan bait langsung dan aksara serta sifir frasa laluan yang mudah. Tiada apa-apa yang dimuat naik."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/ms/"><meta property="og:image" content="https://africa48la.github.io/img/cover_ms.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Pengekod Base64 / URL / Hex & Sifir Mudah - alat teks dalam talian percuma",
+   "url": "https://africa48la.github.io/ms/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "ms",
+   "description": "Alat teks sebelah pelanggan percuma: Base64, URL dan Hex mengekod/menyahkod dengan pengendalian UTF-8 yang betul, kiraan bait langsung dan aksara serta sifir frasa laluan yang mudah. Tiada apa-apa yang dimuat naik.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ms",
+   "url": "https://africa48la.github.io/ms/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Adakah teks saya dimuat naik di mana-mana sahaja?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Semua pengekodan, penyahkodan dan sifir dijalankan dalam penyemak imbas anda dengan API web standard; teks anda tidak pernah meninggalkan peranti anda."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Adakah Base64 menyulitkan data saya?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Base64 ialah pengekodan, bukan penyulitan - sesiapa sahaja boleh menyahkodnya. Ia hanya menjadikan bait selamat untuk diangkut, ia tidak merahsiakannya."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mengapakah Base64 emoji atau bahasa Cina kelihatan berbeza daripada alatan lain?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Kerana alat ini mengekodkan bait UTF-8 yang betul melalui TextEncoder. Alat yang memanggil btoa() terus gagal atau merosakkan aksara di atas Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah perbezaan antara pengekodan URL dan Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Pengekodan URL (encodeURIComponent) melepaskan aksara yang tidak selamat dalam URL menggunakan % jujukan; Base64 menulis semula bait mentah ke dalam abjad 64 aksara. Mereka menyelesaikan masalah pengangkutan yang berbeza."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Adakah sifir frasa laluan selamat?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Tidak. Ia adalah XOR yang mudah untuk penyamaran cahaya sahaja. Untuk kerahsiaan sebenar, gunakan utusan disulitkan hujung ke hujung yang betul seperti Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Apakah = pada akhir Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Ia adalah padding. Base64 berfungsi dalam blok empat aksara; = mengisi blok terakhir apabila panjang input bukan gandaan tiga bait."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Bahasa: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <strong>Bahasa Melayu</strong> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Pengekod Base64 / URL / Hex &amp; Sifir Mudah</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ms.webp"><img src="/img/cover_ms.png" alt="Pengekod teks Base64 URL Hex dan ilustrasi alat sifir mudah" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Pengekod Base64 / URL / Hex dan sifir frasa laluan mudah - semua pihak pelanggan</figcaption></figure>
+<p>Tampal sebarang teks untuk mengekod atau menyahkodnya sebagai Base64, URL-escaped atau Hex dan untuk mengira bait dan aksara UTF-8nya. Terdapat juga sifir frasa laluan mudah untuk pengeliruan cepat. Semuanya berjalan dalam penyemak imbas anda; teks anda tidak pernah dimuat naik.</p>
+<section class="tool"><h2>Mengekod, menyahkod dan mengira</h2><p class="note">Berjalan sepenuhnya dalam penyemak imbas anda. Base64 menggunakan TextEncoder supaya Unicode dan emoji dikendalikan dengan betul.</p><label>Input teks</label><textarea id="tin" placeholder="Tampal atau taip teks di sini..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 bait · <span id="cchars">0</span> Watak</div><label>Ungkapan laluan (untuk sifir)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">pengekodan Base64</button><button data-m="b64d">Base64 nyahkod</button><button data-m="urle">pengekodan URL</button><button data-m="urld">URL nyahkod</button><button data-m="hexe">pengekodan Hex</button><button data-m="hexd">Hex nyahkod</button><button data-m="cye">Sifir (sulit)</button><button data-m="cyd">Sifir (nyahsulit)</button></div><label>Output</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">Salin output</button><button id="tclear">Jelas</button><button id="tswap">Output kepada input</button></div><p class="note">Kekeliruan XOR yang mudah - bukan pengganti untuk penyulitan hujung ke hujung sebenar.</p></section>
+<h2>Perkara yang dilakukan oleh pengekodan teks (dan tidak).</h2><p>Base64, URL-escaping dan Hex ialah pengekodan: mereka menulis semula bait ke dalam set aksara yang selamat supaya data teks dan perduaan bertahan dalam pengangkutan melalui e-mel, URLs dan JSON. Ia boleh diterbalikkan sepenuhnya oleh sesiapa sahaja dan tidak memberikan kerahsiaan. Gunakannya untuk memindahkan data dengan selamat, bukan untuk menyembunyikannya.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Teks"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">Teks</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 bait</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">kumpulan 6-bit</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Saluran paip Base64: teks menjadi bait UTF-8, bait dibahagikan kepada kumpulan 6-bit, setiap kumpulan dipetakan kepada satu aksara Base64.</figcaption></figure>
+<h2>Cara Base64 berfungsi</h2><p>Base64 ditakrifkan oleh RFC 4648. Ia mengumpulkan input ke dalam ketulan 6-bit dan memetakan setiap ketulan kepada satu daripada 64 aksara (A-Z, a-z, 0-9, tambah + dan /), padding dengan = pada penghujungnya. Tiga bait input menjadi empat aksara output, jadi teks yang dikodkan adalah kira-kira 33% lebih besar daripada input. Varian selamat URL menggantikan + dan / dengan - dan _ jadi hasilnya selamat dalam pautan.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ms.webp"><img src="/img/board_ms.png" alt="Gambar rajah membandingkan pengekodan boleh balik dengan penyulitan" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Pengekodan boleh diterbalikkan tanpa kunci; hanya sifir berasaskan kunci atau penyulitan hujung ke hujung yang benar menyimpan rahsia teks</figcaption></figure>
+<h2>Pengekodan bukan penyulitan</h2><p>Kesilapan biasa ialah menganggap Base64 sebagai cara untuk melindungi data. Ia bukan: sesiapa sahaja boleh menyahkodnya. Sifir frasa laluan dalam alat ini menambah kunci, tetapi XOR yang mudah hanyalah pengeliruan ringan dan tidak selamat terhadap penyerang yang ditentukan. Untuk kerahsiaan sebenar, gunakan messenger dengan penyulitan hujung ke hujung yang betul, seperti Telegram Secret Chats, yang menggunakan protokol MTProto dengan AES 256-bit.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Pengekodan (boleh balik)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">Pengekodan (boleh balik)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">Sifir frasa laluan</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">Hujung ke hujung (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>Tiga peringkat: pengekodan boleh diterbalikkan (tiada rahsia), sifir frasa laluan (pengkeliruan ringan) dan penyulitan hujung ke hujung yang benar.</figcaption></figure>
+<section class="i4data">
+<h2>Pemalar pengekodan &amp; penyulitan pemesejan (gambar 2026)</h2>
+<p>Nilai pengekodan di bawah ialah fakta tepat daripada RFC 4648 dan MDN; angka pemesejan ialah anggaran 2026 yang diekstrapolasi daripada garis dasar awam (nombor dan Wikipedia yang diumumkan Telegram) - bukan pengukuran tangan pertama.</p>
+<table>
+<tr><th>Perkara yang dilakukan o</th><th>Pemalar pengekodan &amp; pen</th></tr><tr><td>Overhed saiz Base64</td><td>+33% (tiga bait input menjadi empat aksara), setiap RFC 4648 - tepat</td></tr><tr><td>abjad Base64</td><td>64 aksara: A-Z, a-z, 0-9, + dan /; pelapik =; Penggunaan varian selamat URL - dan _ (RFC 4648 §4-5) - tepat</td></tr><tr><td>Had btoa / atob</td><td>bekerja pada Latin1 sahaja; UTF-8 dan emoji memerlukan TextEncoder / TextDecoder (MDN) - tepat</td></tr><tr><td>Pengguna aktif bulanan Telegram</td><td>melepasi 1 bilion pada Mac 2025 (Pavel Durov); Anggaran 2026: pertumbuhan berterusan</td></tr><tr><td>penyulitan Telegram</td><td>MTProto dengan 256-bit AES, 2048-bit RSA dan Diffie-Hellman; hujung ke hujung hanya dalam Secret Chats, bukan lalai - setiap Wikipedia</td></tr><tr><td>Praktikal bawa pulang</td><td>gunakan pengekodan untuk memindahkan teks dengan selamat; gunakan Secret Chats (atau apl hujung ke hujung yang lain) apabila anda memerlukan kerahsiaan</td></tr>
+</table>
+<p><small>Pemalar pengekodan adalah tepat (RFC 4648 / MDN); penggunaan pemesejan ialah anggaran 2026 yang diekstrapolasi daripada garis dasar awam yang disebut dan perubahan dari semasa ke semasa.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>Adakah teks saya dimuat naik di mana-mana sahaja?</h3>
+<p>Tidak. Semua pengekodan, penyahkodan dan sifir dijalankan dalam penyemak imbas anda dengan API web standard; teks anda tidak pernah meninggalkan peranti anda.</p>
+<h3>Adakah Base64 menyulitkan data saya?</h3>
+<p>Tidak. Base64 ialah pengekodan, bukan penyulitan - sesiapa sahaja boleh menyahkodnya. Ia hanya menjadikan bait selamat untuk diangkut, ia tidak merahsiakannya.</p>
+<h3>Mengapakah Base64 emoji atau bahasa Cina kelihatan berbeza daripada alatan lain?</h3>
+<p>Kerana alat ini mengekodkan bait UTF-8 yang betul melalui TextEncoder. Alat yang memanggil btoa() terus gagal atau merosakkan aksara di atas Latin1.</p>
+<h3>Apakah perbezaan antara pengekodan URL dan Base64?</h3>
+<p>Pengekodan URL (encodeURIComponent) melepaskan aksara yang tidak selamat dalam URL menggunakan % jujukan; Base64 menulis semula bait mentah ke dalam abjad 64 aksara. Mereka menyelesaikan masalah pengangkutan yang berbeza.</p>
+<h3>Adakah sifir frasa laluan selamat?</h3>
+<p>Tidak. Ia adalah XOR yang mudah untuk penyamaran cahaya sahaja. Untuk kerahsiaan sebenar, gunakan utusan disulitkan hujung ke hujung yang betul seperti Telegram Secret Chats.</p>
+<h3>Apakah = pada akhir Base64?</h3>
+<p>Ia adalah padding. Base64 berfungsi dalam blok empat aksara; = mengisi blok terakhir apabila panjang input bukan gandaan tiga bait.</p>
+</div>
+<div class="related"><h2>Dapatkan Telegram</h2><p>Telegram ialah aplikasi pemesejan yang disulitkan dengan Secret Chats untuk penyulitan hujung ke hujung. Muat turun untuk platform anda:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - muat turun semua platform</a></p></div>
+<div class="sources"><h2>Rujukan</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 dalam JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Disusun oleh Ye Fan daripada RFC 4648, MDN Web Docs dan Wikipedia. Untuk rujukan sahaja; semua pengekodan dan sifir dijalankan secara setempat dalam penyemak imbas anda.<br><a href="/about-yefan/" rel="author">Mengenai pengarang: Ye Fan</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "Kekeliruan XOR yang mudah - bukan pengganti untuk penyulitan hujung ke hujung sebenar.", "clear": "Jelas", "copy": "Salin output", "err_decode": "Ralat nyahkod - semak input.", "l_bytes": "UTF-8 bait", "l_chars": "Watak", "l_in": "Input teks", "l_out": "Output", "l_pass": "Ungkapan laluan (untuk sifir)", "m_b64d": "Base64 nyahkod", "m_b64e": "pengekodan Base64", "m_cyd": "Sifir (nyahsulit)", "m_cye": "Sifir (sulit)", "m_hexd": "Hex nyahkod", "m_hexe": "pengekodan Hex", "m_urld": "URL nyahkod", "m_urle": "pengekodan URL", "ph_in": "Tampal atau taip teks di sini...", "run": "Tukar", "swap": "Output kepada input"};</script>
+<script src="/app.js"></script>
+</body></html>
