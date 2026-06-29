@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="th"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex Encoder &amp; Simple Cipher - เครื่องมือข้อความออนไลน์ฟรี</title>
+<meta name="description" content="เครื่องมือข้อความฝั่งไคลเอ็นต์ฟรี: เข้ารหัส/ถอดรหัส Base64, URL และ Hex ด้วยการจัดการ UTF-8 ที่ถูกต้อง จำนวนไบต์และอักขระที่ใช้งานจริง และการเข้ารหัสข้อความรหัสผ่านอย่างง่าย ไม่มีอะไรถูกอัปโหลด">
+<link rel="canonical" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex Encoder &amp; Simple Cipher - เครื่องมือข้อความออนไลน์ฟรี"><meta property="og:description" content="เครื่องมือข้อความฝั่งไคลเอ็นต์ฟรี: เข้ารหัส/ถอดรหัส Base64, URL และ Hex ด้วยการจัดการ UTF-8 ที่ถูกต้อง จำนวนไบต์และอักขระที่ใช้งานจริง และการเข้ารหัสข้อความรหัสผ่านอย่างง่าย ไม่มีอะไรถูกอัปโหลด"><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/th/"><meta property="og:image" content="https://africa48la.github.io/img/cover_th.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex Encoder & Simple Cipher - เครื่องมือข้อความออนไลน์ฟรี",
+   "url": "https://africa48la.github.io/th/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "th",
+   "description": "เครื่องมือข้อความฝั่งไคลเอ็นต์ฟรี: เข้ารหัส/ถอดรหัส Base64, URL และ Hex ด้วยการจัดการ UTF-8 ที่ถูกต้อง จำนวนไบต์และอักขระที่ใช้งานจริง และการเข้ารหัสข้อความรหัสผ่านอย่างง่าย ไม่มีอะไรถูกอัปโหลด",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "th",
+   "url": "https://africa48la.github.io/th/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ข้อความของฉันถูกอัพโหลดทุกที่หรือไม่?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ไม่ การเข้ารหัส การถอดรหัส และการเข้ารหัสทั้งหมดทำงานในเบราว์เซอร์ของคุณด้วย API เว็บมาตรฐาน ข้อความของคุณจะไม่ออกจากอุปกรณ์ของคุณ"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 เข้ารหัสข้อมูลของฉันหรือไม่",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ไม่ Base64 เป็นการเข้ารหัส ไม่ใช่การเข้ารหัส ใครๆ ก็สามารถถอดรหัสได้ มันทำให้ไบต์ปลอดภัยในการขนส่งเท่านั้น มันไม่ได้เก็บเป็นความลับ"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "เหตุใด Base64 ของอิโมจิหรือภาษาจีนจึงดูแตกต่างจากเครื่องมืออื่น ๆ",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "เนื่องจากเครื่องมือนี้เข้ารหัสไบต์ UTF-8 ที่ถูกต้องผ่าน TextEncoder เครื่องมือที่เรียก btoa() ล้มเหลวโดยตรงหรือเสียหายอักขระที่อยู่เหนือ Latin1"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "การเข้ารหัส URL และ Base64 แตกต่างกันอย่างไร",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "การเข้ารหัส URL (encodeURIComponent) จะหลีกอักขระที่ไม่ปลอดภัยใน URL โดยใช้ลำดับ % Base64 เขียนไบต์ดิบใหม่เป็นตัวอักษร 64 ตัว พวกเขาแก้ปัญหาการขนส่งที่แตกต่างกัน"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "รหัสข้อความรหัสผ่านมีความปลอดภัยหรือไม่?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ไม่ มันเป็น XOR ธรรมดาสำหรับการสร้างความสับสนเล็กน้อยเท่านั้น สำหรับการรักษาความลับที่แท้จริง ให้ใช้โปรแกรมรับส่งข้อความที่เข้ารหัสจากต้นทางถึงปลายทางที่เหมาะสม เช่น Telegram Secret Chats"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "= ท้าย Base64 คืออะไร?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "มันเป็นการบุนวม Base64 ทำงานเป็นบล็อกสี่อักขระ = เติมบล็อกสุดท้ายเมื่อความยาวอินพุตไม่เป็นผลคูณของสามไบต์"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ภาษา: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <strong>ไทย</strong> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>ตัวเข้ารหัส Base64 / URL / Hex และการเข้ารหัสอย่างง่าย</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_th.webp"><img src="/img/cover_th.png" alt="Base64 URL Hex ตัวเข้ารหัสข้อความและภาพประกอบเครื่องมือเข้ารหัสอย่างง่าย" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ตัวเข้ารหัส Base64 / URL / Hex และการเข้ารหัสข้อความรหัสผ่านแบบง่าย - ฝั่งไคลเอ็นต์ทั้งหมด</figcaption></figure>
+<p>วางข้อความใดๆ เพื่อเข้ารหัสหรือถอดรหัสเป็น Base64, URL-escape หรือ Hex และเพื่อนับไบต์และอักขระ UTF-8 นอกจากนี้ยังมีการเข้ารหัสข้อความรหัสผ่านอย่างง่ายเพื่อการสร้างความสับสนอย่างรวดเร็ว ทุกอย่างทำงานในเบราว์เซอร์ของคุณ ข้อความของคุณไม่เคยถูกอัปโหลด</p>
+<section class="tool"><h2>เข้ารหัส ถอดรหัส และนับ</h2><p class="note">ทำงานได้อย่างสมบูรณ์ในเบราว์เซอร์ของคุณ Base64 ใช้ TextEncoder ดังนั้น Unicode และอิโมจิจึงได้รับการจัดการอย่างถูกต้อง</p><label>ป้อนข้อความ</label><textarea id="tin" placeholder="วางหรือพิมพ์ข้อความที่นี่..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 ไบต์ · <span id="cchars">0</span> ตัวละคร</div><label>รหัสผ่าน (สำหรับการเข้ารหัส)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">เข้ารหัส Base64</button><button data-m="b64d">ถอดรหัส Base64</button><button data-m="urle">เข้ารหัส URL</button><button data-m="urld">ถอดรหัส URL</button><button data-m="hexe">เข้ารหัส Hex</button><button data-m="hexd">ถอดรหัส Hex</button><button data-m="cye">รหัส (เข้ารหัส)</button><button data-m="cyd">รหัส (ถอดรหัส)</button></div><label>เอาท์พุต</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">คัดลอกเอาต์พุต</button><button id="tclear">ชัดเจน</button><button id="tswap">เอาต์พุตไปยังอินพุต</button></div><p class="note">การสร้างความสับสนอย่างง่ายด้วย XOR - ไม่สามารถแทนที่การเข้ารหัสจากต้นทางถึงปลายทางได้จริง</p></section>
+<h2>การเข้ารหัสข้อความทำอะไร (และไม่) ทำ</h2><p>Base64, URL-escaping และ Hex เป็นการเข้ารหัส โดยจะเขียนไบต์ใหม่เป็นชุดอักขระที่ปลอดภัย เพื่อให้ข้อความและข้อมูลไบนารีสามารถขนส่งผ่านอีเมล URL และ JSON ได้ ทุกคนสามารถย้อนกลับได้อย่างสมบูรณ์และไม่มีการเก็บความลับ ใช้เพื่อย้ายข้อมูลอย่างปลอดภัย ไม่ใช่เพื่อซ่อนข้อมูล</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ข้อความ"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">ข้อความ</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 ไบต์</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">กลุ่ม 6 บิต</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>ไปป์ไลน์ Base64: ข้อความกลายเป็นไบต์ UTF-8 ไบต์จะถูกแบ่งออกเป็นกลุ่ม 6 บิต แต่ละกลุ่มจะแมปกับอักขระ Base64 หนึ่งตัว</figcaption></figure>
+<h2>Base64 ทำงานอย่างไร</h2><p>Base64 ถูกกำหนดโดย RFC 4648 โดยจะจัดกลุ่มอินพุตออกเป็นชิ้นขนาด 6 บิต และแมปแต่ละชิ้นให้มีอักขระ 64 ตัว (A-Z, a-z, 0-9, บวก + และ /) โดยเติมด้วย = ต่อท้าย ไบต์อินพุตสามไบต์กลายเป็นอักขระเอาต์พุตสี่ตัว ดังนั้นข้อความที่เข้ารหัสจึงมีขนาดใหญ่กว่าอินพุตประมาณ 33% รูปแบบที่ปลอดภัยของ URL จะแทนที่ + และ / ด้วย - และ _ ดังนั้นผลลัพธ์จึงปลอดภัยภายในลิงก์</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_th.webp"><img src="/img/board_th.png" alt="แผนภาพเปรียบเทียบการเข้ารหัสแบบย้อนกลับกับการเข้ารหัส" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>การเข้ารหัสสามารถย้อนกลับได้โดยไม่ต้องใช้คีย์ เฉพาะการเข้ารหัสแบบใช้คีย์หรือการเข้ารหัสจากต้นทางถึงปลายทางที่แท้จริงเท่านั้นที่จะเก็บข้อความไว้เป็นความลับ</figcaption></figure>
+<h2>การเข้ารหัสไม่ใช่การเข้ารหัส</h2><p>ข้อผิดพลาดทั่วไปคือถือว่า Base64 เป็นวิธีการปกป้องข้อมูล ไม่ใช่: ใครๆ ก็สามารถถอดรหัสได้ การเข้ารหัสข้อความรหัสผ่านในเครื่องมือนี้จะเพิ่มคีย์ แต่ XOR แบบธรรมดานั้นเป็นเพียงการสร้างความสับสนเล็กน้อย และไม่ปลอดภัยต่อผู้โจมตีที่กำหนด เพื่อการรักษาความลับอย่างแท้จริง ให้ใช้ Messenger ที่มีการเข้ารหัสจากต้นทางถึงปลายทางที่เหมาะสม เช่น Telegram Secret Chats ซึ่งใช้โปรโตคอล MTProto พร้อมด้วย AES 256 บิต</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="การเข้ารหัส (ย้อนกลับได้)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">การเข้ารหัส (ย้อนกลับได้)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">รหัสรหัสผ่าน</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">จากต้นทางถึงปลายทาง (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>สามระดับ: การเข้ารหัสแบบย้อนกลับได้ (ไม่มีความลับ), การเข้ารหัสข้อความรหัสผ่าน (การทำให้คลุมเครือเล็กน้อย) และการเข้ารหัสจากต้นทางถึงปลายทางที่แท้จริง</figcaption></figure>
+<section class="i4data">
+<h2>การเข้ารหัสค่าคงที่และการเข้ารหัสข้อความ (สแน็ปช็อต 2026)</h2>
+<p>ค่าการเข้ารหัสด้านล่างนี้เป็นข้อเท็จจริงที่แน่นอนจาก RFC 4648 และ MDN ตัวเลขการส่งข้อความเป็นการประมาณการปี 2026 ที่อนุมานจากข้อมูลพื้นฐานสาธารณะ (ตัวเลขที่ประกาศของ Telegram และ Wikipedia) ไม่ใช่การวัดผลโดยตรง</p>
+<table>
+<tr><th>การเข้ารหัสข้อความทำอะไร</th><th>การเข้ารหัสค่าคงที่และกา</th></tr><tr><td>Base64 ขนาดเหนือศีรษะ</td><td>+33% (อินพุตสามไบต์กลายเป็นอักขระสี่ตัว) ต่อ RFC 4648 - แน่นอน</td></tr><tr><td>ตัวอักษร Base64</td><td>64 ตัวอักษร: A-Z, a-z, 0-9, + และ /; ช่องว่างภายใน =; การใช้รูปแบบที่ปลอดภัยของ URL - และ _ (RFC 4648 §4-5) - ทุกประการ</td></tr><tr><td>btoa / atob ขีดจำกัด</td><td>ใช้งานได้กับ Latin1 เท่านั้น UTF-8 และอีโมจิต้องมี TextEncoder / TextDecoder (MDN) - แน่นอน</td></tr><tr><td>Telegram ผู้ใช้ที่ใช้งานรายเดือน</td><td>ทะลุ 1 พันล้านในเดือนมีนาคม 2568 (Pavel Durov) ประมาณการปี 2569: เติบโตอย่างต่อเนื่อง</td></tr><tr><td>การเข้ารหัส Telegram</td><td>MTProto พร้อม AES 256 บิต, RSA 2048 บิต และ Diffie-Hellman; จากต้นทางถึงปลายทางเฉพาะใน Secret Chat ไม่ใช่ค่าเริ่มต้น - ตาม Wikipedia</td></tr><tr><td>นำไปใช้ประโยชน์ได้จริง</td><td>ใช้การเข้ารหัสเพื่อย้ายข้อความอย่างปลอดภัย ใช้ Secret Chats (หรือแอป end-to-end อื่น) เมื่อคุณต้องการความลับ</td></tr>
+</table>
+<p><small>ค่าคงที่การเข้ารหัสนั้นแน่นอน (RFC 4648 / MDN) การใช้การรับส่งข้อความเป็นค่าประมาณในปี 2026 ที่คาดการณ์จากข้อมูลพื้นฐานสาธารณะที่อ้างถึงและการเปลี่ยนแปลงเมื่อเวลาผ่านไป</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>ข้อความของฉันถูกอัพโหลดทุกที่หรือไม่?</h3>
+<p>ไม่ การเข้ารหัส การถอดรหัส และการเข้ารหัสทั้งหมดทำงานในเบราว์เซอร์ของคุณด้วย API เว็บมาตรฐาน ข้อความของคุณจะไม่ออกจากอุปกรณ์ของคุณ</p>
+<h3>Base64 เข้ารหัสข้อมูลของฉันหรือไม่</h3>
+<p>ไม่ Base64 เป็นการเข้ารหัส ไม่ใช่การเข้ารหัส ใครๆ ก็สามารถถอดรหัสได้ มันทำให้ไบต์ปลอดภัยในการขนส่งเท่านั้น มันไม่ได้เก็บเป็นความลับ</p>
+<h3>เหตุใด Base64 ของอิโมจิหรือภาษาจีนจึงดูแตกต่างจากเครื่องมืออื่น ๆ</h3>
+<p>เนื่องจากเครื่องมือนี้เข้ารหัสไบต์ UTF-8 ที่ถูกต้องผ่าน TextEncoder เครื่องมือที่เรียก btoa() ล้มเหลวโดยตรงหรือเสียหายอักขระที่อยู่เหนือ Latin1</p>
+<h3>การเข้ารหัส URL และ Base64 แตกต่างกันอย่างไร</h3>
+<p>การเข้ารหัส URL (encodeURIComponent) จะหลีกอักขระที่ไม่ปลอดภัยใน URL โดยใช้ลำดับ % Base64 เขียนไบต์ดิบใหม่เป็นตัวอักษร 64 ตัว พวกเขาแก้ปัญหาการขนส่งที่แตกต่างกัน</p>
+<h3>รหัสข้อความรหัสผ่านมีความปลอดภัยหรือไม่?</h3>
+<p>ไม่ มันเป็น XOR ธรรมดาสำหรับการสร้างความสับสนเล็กน้อยเท่านั้น สำหรับการรักษาความลับที่แท้จริง ให้ใช้โปรแกรมรับส่งข้อความที่เข้ารหัสจากต้นทางถึงปลายทางที่เหมาะสม เช่น Telegram Secret Chats</p>
+<h3>= ท้าย Base64 คืออะไร?</h3>
+<p>มันเป็นการบุนวม Base64 ทำงานเป็นบล็อกสี่อักขระ = เติมบล็อกสุดท้ายเมื่อความยาวอินพุตไม่เป็นผลคูณของสามไบต์</p>
+</div>
+<div class="related"><h2>รับ Telegram</h2><p>Telegram เป็นแอปส่งข้อความที่เข้ารหัสซึ่งมี Secret Chat สำหรับการเข้ารหัสจากต้นทางถึงปลายทาง ดาวน์โหลดสำหรับแพลตฟอร์มของคุณ:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - ดาวน์โหลดทุกแพลตฟอร์ม</a></p></div>
+<div class="sources"><h2>อ้างอิง</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - วิกิพีเดีย (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 ใน JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - วิกิพีเดีย</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>เรียบเรียงโดย Ye Fan จาก RFC 4648, MDN Web Docs และ Wikipedia สำหรับการอ้างอิงเท่านั้น การเข้ารหัสและการเข้ารหัสทั้งหมดทำงานภายในเบราว์เซอร์ของคุณ<br><a href="/about-yefan/" rel="author">เกี่ยวกับผู้เขียน: เย่ ฟาน</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "การสร้างความสับสนอย่างง่ายด้วย XOR - ไม่สามารถแทนที่การเข้ารหัสจากต้นทางถึงปลายทางได้จริง", "clear": "ชัดเจน", "copy": "คัดลอกเอาต์พุต", "err_decode": "ข้อผิดพลาดในการถอดรหัส - ตรวจสอบอินพุต", "l_bytes": "UTF-8 ไบต์", "l_chars": "ตัวละคร", "l_in": "ป้อนข้อความ", "l_out": "เอาท์พุต", "l_pass": "รหัสผ่าน (สำหรับการเข้ารหัส)", "m_b64d": "ถอดรหัส Base64", "m_b64e": "เข้ารหัส Base64", "m_cyd": "รหัส (ถอดรหัส)", "m_cye": "รหัส (เข้ารหัส)", "m_hexd": "ถอดรหัส Hex", "m_hexe": "เข้ารหัส Hex", "m_urld": "ถอดรหัส URL", "m_urle": "เข้ารหัส URL", "ph_in": "วางหรือพิมพ์ข้อความที่นี่...", "run": "แปลง", "swap": "เอาต์พุตไปยังอินพุต"};</script>
+<script src="/app.js"></script>
+</body></html>
