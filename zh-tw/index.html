@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex 編碼解碼器 &amp; 簡單加密 - 免費線上文字工具</title>
+<meta name="description" content="免費純客戶端文字工具：Base64、URL、Hex 編碼解碼，正確處理 UTF-8，實時統計位元組與字元數，並含簡單口令加密。不上傳任何文字。">
+<link rel="canonical" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex 編碼解碼器 &amp; 簡單加密 - 免費線上文字工具"><meta property="og:description" content="免費純客戶端文字工具：Base64、URL、Hex 編碼解碼，正確處理 UTF-8，實時統計位元組與字元數，並含簡單口令加密。不上傳任何文字。"><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/zh-tw/"><meta property="og:image" content="https://africa48la.github.io/img/cover_tw.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex 編碼解碼器 & 簡單加密 - 免費線上文字工具",
+   "url": "https://africa48la.github.io/zh-tw/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "zh-Hant",
+   "description": "免費純客戶端文字工具：Base64、URL、Hex 編碼解碼，正確處理 UTF-8，實時統計位元組與字元數，並含簡單口令加密。不上傳任何文字。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hant",
+   "url": "https://africa48la.github.io/zh-tw/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "我的文字會被上傳嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不會。全部編碼、解碼與加密都在你的瀏覽器內用標準 Web API 完成，文字絕不離開你的裝置。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 會加密我的資料嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不會。Base64 是編碼而非加密——任何人都能解碼。它只是讓位元組便於傳輸，並不保密。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "為什麼 emoji 或中文的 Base64 和別的工具不一樣？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "因為本工具透過 TextEncoder 編碼正確的 UTF-8 位元組。直接呼叫 btoa() 的工具會在 Latin1 以上的字元上出錯或損壞。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "URL 編碼和 Base64 有什麼區別？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "URL 編碼（encodeURIComponent）用 % 序列轉義在 URL 中不安全的字元；Base64 則把原始位元組改寫成 64 字元字母表。它們解決的是不同的傳輸問題。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "這個口令加密安全嗎？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不安全。它只是用於輕度混淆的簡單異或。要真正保密，請使用具備真正端到端加密的通訊工具，如 Telegram 的 Secret Chat。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 末尾的 = 是什麼？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "它是填充。Base64 以每 4 個字元為一塊；當輸入長度不是 3 位元組的整數倍時，用 = 補滿最後一塊。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">語言: <a href="/">简体中文</a> · <strong>繁體中文</strong> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Base64 / URL / Hex 編碼解碼器 &amp; 簡單加密</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_tw.webp"><img src="/img/cover_tw.png" alt="Base64 URL Hex 文字編碼與簡單加密工具示意圖" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex 編碼器與簡單口令加密——全部在客戶端執行</figcaption></figure>
+<p>貼上任意文字，即可把它編碼或解碼為 Base64、URL 轉義或 Hex，並統計 UTF-8 位元組數與字元數。另含一個簡單的口令加密用於快速混淆。所有處理都在你的瀏覽器內完成，文字絕不上傳。</p>
+<section class="tool"><h2>編碼、解碼與計數</h2><p class="note">全程在你的瀏覽器內執行。Base64 使用 TextEncoder，因此 Unicode 與 emoji 都能正確處理。</p><label>輸入文字</label><textarea id="tin" placeholder="在此貼上或輸入文字…"></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 位元組 · <span id="cchars">0</span> 字元數</div><label>口令（用於加密）</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 編碼</button><button data-m="b64d">Base64 解碼</button><button data-m="urle">URL 編碼</button><button data-m="urld">URL 解碼</button><button data-m="hexe">Hex 編碼</button><button data-m="hexd">Hex 解碼</button><button data-m="cye">加密（口令）</button><button data-m="cyd">解密（口令）</button></div><label>輸出</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">複製輸出</button><button id="tclear">清空</button><button id="tswap">輸出轉為輸入</button></div><p class="note">簡單異或混淆——不能替代真正的端到端加密。</p></section>
+<h2>文字編碼能做什麼、不能做什麼</h2><p>Base64、URL 轉義與 Hex 都是編碼：它們把位元組改寫成安全字符集，讓文字與二進位制資料能安全地經由郵件、URL 和 JSON 傳輸。它們對任何人都完全可逆，不提供任何保密性。用它們來安全地搬運資料，而不是隱藏資料。</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="文字"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">文字</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 位元組</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6 位分組</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 流水線：文字先變成 UTF-8 位元組，位元組被切成 6 位一組，每組對映到一個 Base64 字元。</figcaption></figure>
+<h2>Base64 的原理</h2><p>Base64 由 RFC 4648 定義。它把輸入按 6 位分組，每組對映到 64 個字元之一（A–Z、a–z、0–9，外加 + 和 /），末尾用 = 填充。每 3 個輸入位元組變成 4 個輸出字元，因此編碼後的文字比輸入大約大 33%。URL 安全變體把 + 和 / 換成 - 和 _，使結果可安全放進連結。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_tw.webp"><img src="/img/board_tw.png" alt="可逆編碼與加密對比示意圖" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>編碼無需金鑰即可還原；只有帶金鑰的加密或真正的端到端加密才能讓文字保密</figcaption></figure>
+<h2>編碼不是加密</h2><p>一個常見誤區是把 Base64 當成保護資料的手段。它不是：任何人都能解碼。本工具裡的口令加密加入了一個金鑰，但簡單異或只是輕度混淆，擋不住有心的攻擊者。要真正保密，請使用具備真正端到端加密的通訊工具，例如 Telegram 的 Secret Chat（密聊），它採用 MTProto 協議與 256 位 AES。</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="編碼（可逆）"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">編碼（可逆）</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">口令加密</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">端到端（MTProto）</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>三個層級：可逆編碼（無秘密）、口令加密（輕度混淆）、真正的端到端加密。</figcaption></figure>
+<section class="i4data">
+<h2>編碼常量與通訊加密（2026 快照）</h2>
+<p>下方編碼數值是 RFC 4648 與 MDN 的精確事實；通訊類數字是以公開基線（Telegram 官方公佈數 + Wikipedia）外推的 2026 估算，非一手實測。</p>
+<table>
+<tr><th>文字編碼能做什麼、不能做什麼</th><th>編碼常量與通訊加密（2026 快照）</th></tr><tr><td>Base64 體積膨脹</td><td>+33%（3 個輸入位元組變 4 個字元），據 RFC 4648——精確</td></tr><tr><td>Base64 字母表</td><td>64 個字元：A–Z、a–z、0–9、+ 與 /；填充 =；URL 安全變體用 - 與 _（RFC 4648 §4–5）——精確</td></tr><tr><td>btoa / atob 侷限</td><td>僅適用於 Latin1；UTF-8 與 emoji 需 TextEncoder / TextDecoder（MDN）——精確</td></tr><tr><td>Telegram 月活使用者</td><td>2025 年 3 月超 10 億（Pavel Durov）；2026 估算：延續增長</td></tr><tr><td>Telegram 加密</td><td>MTProto，採用 256 位 AES、2048 位 RSA 與 Diffie-Hellman；端到端僅見於 Secret Chat，並非預設——據 Wikipedia</td></tr><tr><td>實用結論</td><td>用編碼安全搬運文字；需要保密時用 Secret Chat（或其它端到端 App）</td></tr>
+</table>
+<p><small>編碼常量為精確事實（RFC 4648 / MDN）；通訊採用率為以所引公開基線外推的 2026 估算，隨時間變化。</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>我的文字會被上傳嗎？</h3>
+<p>不會。全部編碼、解碼與加密都在你的瀏覽器內用標準 Web API 完成，文字絕不離開你的裝置。</p>
+<h3>Base64 會加密我的資料嗎？</h3>
+<p>不會。Base64 是編碼而非加密——任何人都能解碼。它只是讓位元組便於傳輸，並不保密。</p>
+<h3>為什麼 emoji 或中文的 Base64 和別的工具不一樣？</h3>
+<p>因為本工具透過 TextEncoder 編碼正確的 UTF-8 位元組。直接呼叫 btoa() 的工具會在 Latin1 以上的字元上出錯或損壞。</p>
+<h3>URL 編碼和 Base64 有什麼區別？</h3>
+<p>URL 編碼（encodeURIComponent）用 % 序列轉義在 URL 中不安全的字元；Base64 則把原始位元組改寫成 64 字元字母表。它們解決的是不同的傳輸問題。</p>
+<h3>這個口令加密安全嗎？</h3>
+<p>不安全。它只是用於輕度混淆的簡單異或。要真正保密，請使用具備真正端到端加密的通訊工具，如 Telegram 的 Secret Chat。</p>
+<h3>Base64 末尾的 = 是什麼？</h3>
+<p>它是填充。Base64 以每 4 個字元為一塊；當輸入長度不是 3 位元組的整數倍時，用 = 補滿最後一塊。</p>
+</div>
+<div class="related"><h2>獲取 Telegram</h2><p>Telegram 是一款加密通訊 App，其 Secret Chat 提供端到端加密。按你的平臺下載：</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram·全平臺下載</a></p></div>
+<div class="sources"><h2>參考資料</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - 維基百科（RFC 4648）</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - JavaScript 中的 Base64</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - 維基百科</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>由葉凡整理自 RFC 4648、MDN Web 文件與維基百科，僅供參考；所有編碼與加密都在你的瀏覽器本地執行。<br><a href="/about-yefan/" rel="author">關於作者：葉凡</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "簡單異或混淆——不能替代真正的端到端加密。", "clear": "清空", "copy": "複製輸出", "err_decode": "解碼出錯——請檢查輸入。", "l_bytes": "UTF-8 位元組", "l_chars": "字元數", "l_in": "輸入文字", "l_out": "輸出", "l_pass": "口令（用於加密）", "m_b64d": "Base64 解碼", "m_b64e": "Base64 編碼", "m_cyd": "解密（口令）", "m_cye": "加密（口令）", "m_hexd": "Hex 解碼", "m_hexe": "Hex 編碼", "m_urld": "URL 解碼", "m_urle": "URL 編碼", "ph_in": "在此貼上或輸入文字…", "run": "轉換", "swap": "輸出轉為輸入"};</script>
+<script src="/app.js"></script>
+</body></html>
