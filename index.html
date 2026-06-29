@@ -1,35 +1,147 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-<meta charset="UTF-8">
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>电报 中文版 - 官方资源与在线工具</title>
-<meta name="description" content="电报相关资源导航：官网入口与免费在线小工具。电报（Telegram）是一款注重隐私与速度的即时通讯工具，支持多端同步与大文件">
+<title>Base64 / URL / Hex 编码解码器 &amp; 简单加密 - 免费在线文本工具</title>
+<meta name="description" content="免费纯客户端文本工具：Base64、URL、Hex 编码解码，正确处理 UTF-8，实时统计字节与字符数，并含简单口令加密。不上传任何文本。">
 <link rel="canonical" href="https://africa48la.github.io/">
-<meta property="og:title" content="电报 中文版">
-<meta property="og:description" content="电报官网入口与免费在线小工具。">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://africa48la.github.io/">
-<style>:root{--b:#1a73e8}*{box-sizing:border-box}body{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;max-width:760px;margin:0 auto;padding:24px;color:#1f2937;line-height:1.7;background:#fff}h1{color:var(--b);font-size:1.6rem;margin:.2em 0}h2{font-size:1.2rem;margin-top:1.6em;border-left:4px solid var(--b);padding-left:10px}.card{border:1px solid #e5e7eb;border-radius:10px;padding:18px;margin:16px 0;background:#fafafa}a{color:var(--b)}footer{margin-top:40px;padding-top:16px;border-top:1px solid #eee;color:#9ca3af;font-size:.85rem}</style>
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex 编码解码器 &amp; 简单加密 - 免费在线文本工具"><meta property="og:description" content="免费纯客户端文本工具：Base64、URL、Hex 编码解码，正确处理 UTF-8，实时统计字节与字符数，并含简单口令加密。不上传任何文本。"><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/"><meta property="og:image" content="https://africa48la.github.io/img/cover_zh.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex 编码解码器 & 简单加密 - 免费在线文本工具",
+   "url": "https://africa48la.github.io/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "zh-Hans",
+   "description": "免费纯客户端文本工具：Base64、URL、Hex 编码解码，正确处理 UTF-8，实时统计字节与字符数，并含简单口令加密。不上传任何文本。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "zh-Hans",
+   "url": "https://africa48la.github.io/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "我的文本会被上传吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不会。全部编码、解码与加密都在你的浏览器内用标准 Web API 完成，文本绝不离开你的设备。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 会加密我的数据吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不会。Base64 是编码而非加密——任何人都能解码。它只是让字节便于传输，并不保密。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "为什么 emoji 或中文的 Base64 和别的工具不一样？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "因为本工具通过 TextEncoder 编码正确的 UTF-8 字节。直接调用 btoa() 的工具会在 Latin1 以上的字符上出错或损坏。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "URL 编码和 Base64 有什么区别？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "URL 编码（encodeURIComponent）用 % 序列转义在 URL 中不安全的字符；Base64 则把原始字节改写成 64 字符字母表。它们解决的是不同的传输问题。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "这个口令加密安全吗？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "不安全。它只是用于轻度混淆的简单异或。要真正保密，请使用具备真正端到端加密的通讯工具，如 Telegram 的 Secret Chat。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 末尾的 = 是什么？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "它是填充。Base64 以每 4 个字符为一块；当输入长度不是 3 字节的整数倍时，用 = 补满最后一块。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
 </head>
-<body>
-<h1>电报</h1>
-<p>电报（Telegram）是一款注重隐私与速度的即时通讯工具，支持多端同步与大文件传输。</p>
-<div class="card">
-<h2 style="margin-top:0;border:0;padding:0">官方网站</h2>
-<p>访问 电报 官方网站，了解完整功能与下载方式：<br>
-<a href="https://telegramencrypted.com/"><strong>telegramencrypted.com</strong></a></p>
+<body><div class="wrap"><main>
+<nav class="lang">语言: <strong>简体中文</strong> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Base64 / URL / Hex 编码解码器 &amp; 简单加密</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_zh.webp"><img src="/img/cover_zh.png" alt="Base64 URL Hex 文本编码与简单加密工具示意图" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex 编码器与简单口令加密——全部在客户端运行</figcaption></figure>
+<p>粘贴任意文本，即可把它编码或解码为 Base64、URL 转义或 Hex，并统计 UTF-8 字节数与字符数。另含一个简单的口令加密用于快速混淆。所有处理都在你的浏览器内完成，文本绝不上传。</p>
+<section class="tool"><h2>编码、解码与计数</h2><p class="note">全程在你的浏览器内运行。Base64 使用 TextEncoder，因此 Unicode 与 emoji 都能正确处理。</p><label>输入文本</label><textarea id="tin" placeholder="在此粘贴或输入文本…"></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 字节 · <span id="cchars">0</span> 字符数</div><label>口令（用于加密）</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 编码</button><button data-m="b64d">Base64 解码</button><button data-m="urle">URL 编码</button><button data-m="urld">URL 解码</button><button data-m="hexe">Hex 编码</button><button data-m="hexd">Hex 解码</button><button data-m="cye">加密（口令）</button><button data-m="cyd">解密（口令）</button></div><label>输出</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">复制输出</button><button id="tclear">清空</button><button id="tswap">输出转为输入</button></div><p class="note">简单异或混淆——不能替代真正的端到端加密。</p></section>
+<h2>文本编码能做什么、不能做什么</h2><p>Base64、URL 转义与 Hex 都是编码：它们把字节改写成安全字符集，让文本与二进制数据能安全地经由邮件、URL 和 JSON 传输。它们对任何人都完全可逆，不提供任何保密性。用它们来安全地搬运数据，而不是隐藏数据。</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="文本"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">文本</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 字节</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6 位分组</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 流水线：文本先变成 UTF-8 字节，字节被切成 6 位一组，每组映射到一个 Base64 字符。</figcaption></figure>
+<h2>Base64 的原理</h2><p>Base64 由 RFC 4648 定义。它把输入按 6 位分组，每组映射到 64 个字符之一（A–Z、a–z、0–9，外加 + 和 /），末尾用 = 填充。每 3 个输入字节变成 4 个输出字符，因此编码后的文本比输入大约大 33%。URL 安全变体把 + 和 / 换成 - 和 _，使结果可安全放进链接。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_zh.webp"><img src="/img/board_zh.png" alt="可逆编码与加密对比示意图" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>编码无需密钥即可还原；只有带密钥的加密或真正的端到端加密才能让文本保密</figcaption></figure>
+<h2>编码不是加密</h2><p>一个常见误区是把 Base64 当成保护数据的手段。它不是：任何人都能解码。本工具里的口令加密加入了一个密钥，但简单异或只是轻度混淆，挡不住有心的攻击者。要真正保密，请使用具备真正端到端加密的通讯工具，例如 Telegram 的 Secret Chat（密聊），它采用 MTProto 协议与 256 位 AES。</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="编码（可逆）"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">编码（可逆）</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">口令加密</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">端到端（MTProto）</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>三个层级：可逆编码（无秘密）、口令加密（轻度混淆）、真正的端到端加密。</figcaption></figure>
+<section class="i4data">
+<h2>编码常量与通讯加密（2026 快照）</h2>
+<p>下方编码数值是 RFC 4648 与 MDN 的精确事实；通讯类数字是以公开基线（Telegram 官方公布数 + Wikipedia）外推的 2026 估算，非一手实测。</p>
+<table>
+<tr><th>文本编码能做什么、不能做什么</th><th>编码常量与通讯加密（2026 快照）</th></tr><tr><td>Base64 体积膨胀</td><td>+33%（3 个输入字节变 4 个字符），据 RFC 4648——精确</td></tr><tr><td>Base64 字母表</td><td>64 个字符：A–Z、a–z、0–9、+ 与 /；填充 =；URL 安全变体用 - 与 _（RFC 4648 §4–5）——精确</td></tr><tr><td>btoa / atob 局限</td><td>仅适用于 Latin1；UTF-8 与 emoji 需 TextEncoder / TextDecoder（MDN）——精确</td></tr><tr><td>Telegram 月活用户</td><td>2025 年 3 月超 10 亿（Pavel Durov）；2026 估算：延续增长</td></tr><tr><td>Telegram 加密</td><td>MTProto，采用 256 位 AES、2048 位 RSA 与 Diffie-Hellman；端到端仅见于 Secret Chat，并非默认——据 Wikipedia</td></tr><tr><td>实用结论</td><td>用编码安全搬运文本；需要保密时用 Secret Chat（或其它端到端 App）</td></tr>
+</table>
+<p><small>编码常量为精确事实（RFC 4648 / MDN）；通讯采用率为以所引公开基线外推的 2026 估算，随时间变化。</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>我的文本会被上传吗？</h3>
+<p>不会。全部编码、解码与加密都在你的浏览器内用标准 Web API 完成，文本绝不离开你的设备。</p>
+<h3>Base64 会加密我的数据吗？</h3>
+<p>不会。Base64 是编码而非加密——任何人都能解码。它只是让字节便于传输，并不保密。</p>
+<h3>为什么 emoji 或中文的 Base64 和别的工具不一样？</h3>
+<p>因为本工具通过 TextEncoder 编码正确的 UTF-8 字节。直接调用 btoa() 的工具会在 Latin1 以上的字符上出错或损坏。</p>
+<h3>URL 编码和 Base64 有什么区别？</h3>
+<p>URL 编码（encodeURIComponent）用 % 序列转义在 URL 中不安全的字符；Base64 则把原始字节改写成 64 字符字母表。它们解决的是不同的传输问题。</p>
+<h3>这个口令加密安全吗？</h3>
+<p>不安全。它只是用于轻度混淆的简单异或。要真正保密，请使用具备真正端到端加密的通讯工具，如 Telegram 的 Secret Chat。</p>
+<h3>Base64 末尾的 = 是什么？</h3>
+<p>它是填充。Base64 以每 4 个字符为一块；当输入长度不是 3 字节的整数倍时，用 = 补满最后一块。</p>
 </div>
-<div class="card">
-<h2 style="margin-top:0;border:0;padding:0">免费在线小工具</h2>
-<p>本站还为 电报 用户提供一个纯本地运行的小工具（数据不上传）：<br>
-<a href="https://africa48la.github.io/telegramencrypted-text-cipher/">文本加解密工具 →</a></p>
+<div class="related"><h2>获取 Telegram</h2><p>Telegram 是一款加密通讯 App，其 Secret Chat 提供端到端加密。按你的平台下载：</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram·全平台下载</a></p></div>
+<div class="sources"><h2>参考资料</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - 维基百科（RFC 4648）</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - JavaScript 中的 Base64</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - 维基百科</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>由叶凡整理自 RFC 4648、MDN Web 文档与维基百科，仅供参考；所有编码与加密都在你的浏览器本地运行。<br><a href="/about-yefan/" rel="author">关于作者：叶凡</a> · MIT License</footer>
 </div>
-<h2>关于 电报</h2>
-<p>电报（Telegram）是一款注重隐私与速度的即时通讯工具，支持多端同步与大文件传输。 更多信息与下载请访问 <a href="https://telegramencrypted.com/">电报官网</a>。</p>
-<footer>
-<p>本页为 电报 相关资源导航页，工具均在本地浏览器处理、不上传服务器。</p>
-<p>官网：<a href="https://telegramencrypted.com/">telegramencrypted.com</a> · 最后更新：2026-06</p>
-</footer>
-</body>
-</html>
+<script>window.T={"cipher_note": "简单异或混淆——不能替代真正的端到端加密。", "clear": "清空", "copy": "复制输出", "err_decode": "解码出错——请检查输入。", "l_bytes": "UTF-8 字节", "l_chars": "字符数", "l_in": "输入文本", "l_out": "输出", "l_pass": "口令（用于加密）", "m_b64d": "Base64 解码", "m_b64e": "Base64 编码", "m_cyd": "解密（口令）", "m_cye": "加密（口令）", "m_hexd": "Hex 解码", "m_hexe": "Hex 编码", "m_urld": "URL 解码", "m_urle": "URL 编码", "ph_in": "在此粘贴或输入文本…", "run": "转换", "swap": "输出转为输入"};</script>
+<script src="/app.js"></script>
+</body></html>
