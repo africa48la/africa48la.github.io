@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="vi"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Bộ mã hóa &amp; mật mã đơn giản Base64 / URL / Hex - công cụ văn bản trực tuyến miễn phí</title>
+<meta name="description" content="Công cụ văn bản phía máy khách miễn phí: Mã hóa/giải mã Base64, URL và Hex với khả năng xử lý UTF-8 chính xác, số byte và ký tự trực tiếp cũng như mật mã cụm mật khẩu đơn giản. Không có gì được tải lên.">
+<link rel="canonical" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Bộ mã hóa &amp; mật mã đơn giản Base64 / URL / Hex - công cụ văn bản trực tuyến miễn phí"><meta property="og:description" content="Công cụ văn bản phía máy khách miễn phí: Mã hóa/giải mã Base64, URL và Hex với khả năng xử lý UTF-8 chính xác, số byte và ký tự trực tiếp cũng như mật mã cụm mật khẩu đơn giản. Không có gì được tải lên."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/vi/"><meta property="og:image" content="https://africa48la.github.io/img/cover_vi.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Bộ mã hóa & mật mã đơn giản Base64 / URL / Hex - công cụ văn bản trực tuyến miễn phí",
+   "url": "https://africa48la.github.io/vi/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "vi",
+   "description": "Công cụ văn bản phía máy khách miễn phí: Mã hóa/giải mã Base64, URL và Hex với khả năng xử lý UTF-8 chính xác, số byte và ký tự trực tiếp cũng như mật mã cụm mật khẩu đơn giản. Không có gì được tải lên.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "vi",
+   "url": "https://africa48la.github.io/vi/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "Văn bản của tôi có được tải lên ở đâu không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Không. Tất cả mã hóa, giải mã và mật mã đều chạy trong trình duyệt của bạn bằng API web tiêu chuẩn; văn bản của bạn không bao giờ rời khỏi thiết bị của bạn."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 có mã hóa dữ liệu của tôi không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Không. Base64 là mã hóa, không phải mã hóa - bất kỳ ai cũng có thể giải mã được. Nó chỉ làm cho byte an toàn khi vận chuyển chứ không giữ bí mật chúng."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Tại sao Base64 của biểu tượng cảm xúc hoặc tiếng Trung trông khác với các công cụ khác?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Bởi vì công cụ này mã hóa các byte UTF-8 chính xác thông qua TextEncoder. Các công cụ gọi btoa() trực tiếp bị lỗi hoặc làm hỏng các ký tự trên Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Sự khác biệt giữa mã hóa URL và Base64 là gì?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Mã hóa URL (encodeURIComponent) thoát khỏi các ký tự không an toàn trong URL bằng cách sử dụng chuỗi %; Base64 viết lại byte thô thành bảng chữ cái 64 ký tự. Họ giải quyết các vấn đề vận chuyển khác nhau."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Mật mã cụm mật khẩu có an toàn không?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Không. Đây là một XOR đơn giản chỉ dùng để che giấu ánh sáng. Để bảo mật thực sự, hãy sử dụng trình nhắn tin được mã hóa đầu cuối thích hợp như Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "= ở cuối Base64 là gì?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Đó là phần đệm. Base64 hoạt động theo khối bốn ký tự; = điền vào khối cuối cùng khi độ dài đầu vào không phải là bội số của ba byte."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">Ngôn ngữ: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <strong>Tiếng Việt</strong> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Bộ mã hóa Base64 / URL / Hex &amp; Mật mã đơn giản</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_vi.webp"><img src="/img/cover_vi.png" alt="Base64 URL Hex bộ mã hóa văn bản và minh họa công cụ mật mã đơn giản" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Bộ mã hóa Base64 / URL / Hex và mật mã cụm mật khẩu đơn giản - tất cả phía máy khách</figcaption></figure>
+<p>Dán bất kỳ văn bản nào để mã hóa hoặc giải mã nó dưới dạng Base64, URL-escaped hoặc Hex và để đếm số byte và ký tự UTF-8 của nó. Ngoài ra còn có một mật mã cụm mật khẩu đơn giản để làm xáo trộn nhanh chóng. Mọi thứ đều chạy trong trình duyệt của bạn; văn bản của bạn không bao giờ được tải lên.</p>
+<section class="tool"><h2>Mã hóa, giải mã và đếm</h2><p class="note">Chạy hoàn toàn trong trình duyệt của bạn. Base64 sử dụng TextEncoder nên Unicode và biểu tượng cảm xúc được xử lý chính xác.</p><label>Nhập văn bản</label><textarea id="tin" placeholder="Dán hoặc nhập văn bản vào đây..."></textarea><div class="stat"><span id="cbytes">0</span> byte UTF-8 · <span id="cchars">0</span> nhân vật</div><label>Cụm mật khẩu (cho mật mã)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Mã hóa Base64</button><button data-m="b64d">Giải mã Base64</button><button data-m="urle">Mã hóa URL</button><button data-m="urld">Giải mã URL</button><button data-m="hexe">Mã hóa Hex</button><button data-m="hexd">Giải mã Hex</button><button data-m="cye">Mật mã (mã hóa)</button><button data-m="cyd">Mật mã (giải mã)</button></div><label>đầu ra</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">Sao chép đầu ra</button><button id="tclear">Xóa</button><button id="tswap">Đầu ra thành đầu vào</button></div><p class="note">Mã hóa XOR đơn giản - không thể thay thế cho mã hóa đầu cuối thực sự.</p></section>
+<h2>Mã hóa văn bản làm gì (và không) làm gì</h2><p>Base64, URL-escaping và Hex là các mã hóa: chúng viết lại byte thành một bộ ký tự an toàn để dữ liệu văn bản và nhị phân tồn tại khi truyền qua email, URL và JSON. Chúng hoàn toàn có thể được đảo ngược bởi bất kỳ ai và không cung cấp bí mật. Sử dụng chúng để di chuyển dữ liệu một cách an toàn chứ không phải để ẩn nó.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="văn bản"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">văn bản</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">byte UTF-8</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">Nhóm 6 bit</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Đường dẫn Base64: văn bản trở thành byte UTF-8, byte được chia thành các nhóm 6 bit, mỗi nhóm ánh xạ tới một ký tự Base64.</figcaption></figure>
+<h2>Base64 hoạt động như thế nào</h2><p>Base64 được xác định bởi RFC 4648. Nó nhóm đầu vào thành các đoạn 6 bit và ánh xạ từng đoạn thành một trong 64 ký tự (A-Z, a-z, 0-9, cộng + và /), đệm bằng = ở cuối. Ba byte đầu vào trở thành bốn ký tự đầu ra, do đó văn bản được mã hóa lớn hơn khoảng 33% so với đầu vào. Biến thể URL-safe thay thế + và / bằng - và _ vì vậy kết quả là các liên kết bên trong an toàn.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_vi.webp"><img src="/img/board_vi.png" alt="Sơ đồ so sánh mã hóa đảo ngược với mã hóa" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Mã hóa có thể đảo ngược mà không cần khóa; chỉ mật mã dựa trên khóa hoặc mã hóa đầu cuối thực sự mới giữ bí mật văn bản</figcaption></figure>
+<h2>Mã hóa không phải là mã hóa</h2><p>Một lỗi phổ biến là coi Base64 như một cách để bảo vệ dữ liệu. Không phải vậy: bất cứ ai cũng có thể giải mã được nó. Mật mã cụm mật khẩu trong công cụ này thêm một khóa, nhưng XOR đơn giản chỉ làm xáo trộn nhẹ và không an toàn trước kẻ tấn công kiên quyết. Để bảo mật thực sự, hãy sử dụng trình nhắn tin có mã hóa đầu cuối thích hợp, chẳng hạn như Telegram Secret Chat, sử dụng giao thức MTProto với AES 256-bit.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mã hóa (có thể đảo ngược)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">Mã hóa (có thể đảo ngược)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">Mật mã cụm mật khẩu</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">Từ đầu đến cuối (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>Ba cấp độ: mã hóa đảo ngược (không có bí mật), mật mã cụm mật khẩu (làm xáo trộn nhẹ) và mã hóa đầu cuối thực sự.</figcaption></figure>
+<section class="i4data">
+<h2>Hằng số mã hóa và mã hóa tin nhắn (ảnh chụp nhanh năm 2026)</h2>
+<p>Các giá trị mã hóa bên dưới là thông tin chính xác từ RFC 4648 và MDN; số liệu về tin nhắn là ước tính năm 2026 được ngoại suy từ các số liệu cơ sở công khai (các con số được Telegram công bố và Wikipedia) - không phải số liệu đo lường trực tiếp.</p>
+<table>
+<tr><th>Mã hóa văn bản làm gì (v</th><th>Hằng số mã hóa và mã hóa</th></tr><tr><td>Chi phí kích thước Base64</td><td>+33% (ba byte đầu vào trở thành bốn ký tự), theo RFC 4648 - chính xác</td></tr><tr><td>Bảng chữ cái Base64</td><td>64 ký tự: A-Z, a-z, 0-9, + và /; đệm =; Biến thể an toàn URL sử dụng - và _ (RFC 4648 §4-5) - chính xác</td></tr><tr><td>Giới hạn btoa / atob</td><td>chỉ hoạt động trên Latin1; UTF-8 và biểu tượng cảm xúc cần TextEncoder / TextDecoder (MDN) - chính xác</td></tr><tr><td>Người dùng hoạt động hàng tháng của Telegram</td><td>vượt 1 tỷ vào tháng 3 năm 2025 (Pavel Durov); Ước tính năm 2026: tiếp tục tăng trưởng</td></tr><tr><td>Mã hóa Telegram</td><td>MTProto với AES 256 bit, RSA 2048 bit và Diffie-Hellman; chỉ từ đầu đến cuối trong Secret Chat, không phải mặc định - theo Wikipedia</td></tr><tr><td>Bài học thực tế</td><td>sử dụng mã hóa để di chuyển văn bản một cách an toàn; sử dụng Secret Chat (hoặc ứng dụng đầu cuối khác) khi bạn cần bí mật</td></tr>
+</table>
+<p><small>Các hằng số mã hóa chính xác (RFC 4648 / MDN); việc áp dụng tin nhắn là ước tính năm 2026 được ngoại suy từ các đường cơ sở công khai được trích dẫn và những thay đổi theo thời gian.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>Văn bản của tôi có được tải lên ở đâu không?</h3>
+<p>Không. Tất cả mã hóa, giải mã và mật mã đều chạy trong trình duyệt của bạn bằng API web tiêu chuẩn; văn bản của bạn không bao giờ rời khỏi thiết bị của bạn.</p>
+<h3>Base64 có mã hóa dữ liệu của tôi không?</h3>
+<p>Không. Base64 là mã hóa, không phải mã hóa - bất kỳ ai cũng có thể giải mã được. Nó chỉ làm cho byte an toàn khi vận chuyển chứ không giữ bí mật chúng.</p>
+<h3>Tại sao Base64 của biểu tượng cảm xúc hoặc tiếng Trung trông khác với các công cụ khác?</h3>
+<p>Bởi vì công cụ này mã hóa các byte UTF-8 chính xác thông qua TextEncoder. Các công cụ gọi btoa() trực tiếp bị lỗi hoặc làm hỏng các ký tự trên Latin1.</p>
+<h3>Sự khác biệt giữa mã hóa URL và Base64 là gì?</h3>
+<p>Mã hóa URL (encodeURIComponent) thoát khỏi các ký tự không an toàn trong URL bằng cách sử dụng chuỗi %; Base64 viết lại byte thô thành bảng chữ cái 64 ký tự. Họ giải quyết các vấn đề vận chuyển khác nhau.</p>
+<h3>Mật mã cụm mật khẩu có an toàn không?</h3>
+<p>Không. Đây là một XOR đơn giản chỉ dùng để che giấu ánh sáng. Để bảo mật thực sự, hãy sử dụng trình nhắn tin được mã hóa đầu cuối thích hợp như Telegram Secret Chats.</p>
+<h3>= ở cuối Base64 là gì?</h3>
+<p>Đó là phần đệm. Base64 hoạt động theo khối bốn ký tự; = điền vào khối cuối cùng khi độ dài đầu vào không phải là bội số của ba byte.</p>
+</div>
+<div class="related"><h2>Nhận Telegram</h2><p>Telegram là một ứng dụng nhắn tin được mã hóa với Secret Chat để mã hóa hai đầu. Tải xuống cho nền tảng của bạn:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - tải xuống trên mọi nền tảng</a></p></div>
+<div class="sources"><h2>Tài liệu tham khảo</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 trong JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>Được biên soạn bởi Ye Fan từ RFC 4648, MDN Web Docs và Wikipedia. Chỉ để tham khảo; tất cả mã hóa và mật mã đều chạy cục bộ trong trình duyệt của bạn.<br><a href="/about-yefan/" rel="author">Về tác giả: Diệp Phàm</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "Mã hóa XOR đơn giản - không thể thay thế cho mã hóa đầu cuối thực sự.", "clear": "Xóa", "copy": "Sao chép đầu ra", "err_decode": "Lỗi giải mã - kiểm tra đầu vào.", "l_bytes": "byte UTF-8", "l_chars": "nhân vật", "l_in": "Nhập văn bản", "l_out": "đầu ra", "l_pass": "Cụm mật khẩu (cho mật mã)", "m_b64d": "Giải mã Base64", "m_b64e": "Mã hóa Base64", "m_cyd": "Mật mã (giải mã)", "m_cye": "Mật mã (mã hóa)", "m_hexd": "Giải mã Hex", "m_hexe": "Mã hóa Hex", "m_urld": "Giải mã URL", "m_urle": "Mã hóa URL", "ph_in": "Dán hoặc nhập văn bản vào đây...", "run": "Chuyển đổi", "swap": "Đầu ra thành đầu vào"};</script>
+<script src="/app.js"></script>
+</body></html>
