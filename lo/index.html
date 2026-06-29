@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="lo"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ຕົວເຂົ້າລະຫັດ Base64 / URL / Hex &amp; Simple Cipher - ເຄື່ອງມືຂໍ້ຄວາມອອນໄລນ໌ຟຣີ</title>
+<meta name="description" content="ເຄື່ອງມືຂໍ້ຄວາມຂ້າງລູກຄ້າຟຣີ: Base64, URL ແລະ Hex ເຂົ້າລະຫັດ / ຖອດລະຫັດດ້ວຍການຈັດການ UTF-8 ທີ່ຖືກຕ້ອງ, ໄບຕ໌ສົດແລະຈໍານວນຕົວອັກສອນ, ແລະລະຫັດລະຫັດຜ່ານງ່າຍໆ. ບໍ່ມີຫຍັງຖືກອັບໂຫລດ.">
+<link rel="canonical" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="ຕົວເຂົ້າລະຫັດ Base64 / URL / Hex &amp; Simple Cipher - ເຄື່ອງມືຂໍ້ຄວາມອອນໄລນ໌ຟຣີ"><meta property="og:description" content="ເຄື່ອງມືຂໍ້ຄວາມຂ້າງລູກຄ້າຟຣີ: Base64, URL ແລະ Hex ເຂົ້າລະຫັດ / ຖອດລະຫັດດ້ວຍການຈັດການ UTF-8 ທີ່ຖືກຕ້ອງ, ໄບຕ໌ສົດແລະຈໍານວນຕົວອັກສອນ, ແລະລະຫັດລະຫັດຜ່ານງ່າຍໆ. ບໍ່ມີຫຍັງຖືກອັບໂຫລດ."><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/lo/"><meta property="og:image" content="https://africa48la.github.io/img/cover_lo.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "ຕົວເຂົ້າລະຫັດ Base64 / URL / Hex & Simple Cipher - ເຄື່ອງມືຂໍ້ຄວາມອອນໄລນ໌ຟຣີ",
+   "url": "https://africa48la.github.io/lo/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "lo",
+   "description": "ເຄື່ອງມືຂໍ້ຄວາມຂ້າງລູກຄ້າຟຣີ: Base64, URL ແລະ Hex ເຂົ້າລະຫັດ / ຖອດລະຫັດດ້ວຍການຈັດການ UTF-8 ທີ່ຖືກຕ້ອງ, ໄບຕ໌ສົດແລະຈໍານວນຕົວອັກສອນ, ແລະລະຫັດລະຫັດຜ່ານງ່າຍໆ. ບໍ່ມີຫຍັງຖືກອັບໂຫລດ.",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "lo",
+   "url": "https://africa48la.github.io/lo/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "ຂໍ້ຄວາມຂອງຂ້ອຍຖືກອັບໂຫລດຢູ່ບ່ອນໃດ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ບໍ່. ການເຂົ້າລະຫັດ, ການຖອດລະຫັດ ແລະລະຫັດລັບທັງໝົດດຳເນີນຢູ່ໃນບຣາວເຊີຂອງທ່ານດ້ວຍ API ຂອງເວັບມາດຕະຖານ; ຂໍ້ຄວາມຂອງເຈົ້າບໍ່ເຄີຍອອກຈາກອຸປະກອນຂອງທ່ານ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 ເຂົ້າລະຫັດຂໍ້ມູນຂອງຂ້ອຍບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ສະບັບເລກທີ Base64 ແມ່ນການເຂົ້າລະຫັດ, ບໍ່ແມ່ນການເຂົ້າລະຫັດ - ທຸກຄົນສາມາດຖອດລະຫັດມັນໄດ້. ມັນພຽງແຕ່ເຮັດໃຫ້ bytes ປອດໄພໃນການຂົນສົ່ງ, ມັນບໍ່ໄດ້ເກັບຮັກສາໃຫ້ເຂົາເຈົ້າເປັນຄວາມລັບ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ເປັນຫຍັງ Base64 ຂອງ emoji ຫຼືຈີນເບິ່ງແຕກຕ່າງຈາກເຄື່ອງມືອື່ນໆ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ເນື່ອງຈາກວ່າເຄື່ອງມືນີ້ເຂົ້າລະຫັດ UTF-8 bytes ທີ່ຖືກຕ້ອງຜ່ານ TextEncoder. ເຄື່ອງມືທີ່ໂທຫາ btoa() ລົ້ມເຫລວໂດຍກົງຫຼືຕົວລະຄອນທີ່ເສຍຫາຍຂ້າງເທິງ Latin1."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ຄວາມແຕກຕ່າງລະຫວ່າງການເຂົ້າລະຫັດ URL ແລະ Base64 ແມ່ນຫຍັງ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ການເຂົ້າລະຫັດ URL (encodeURIComponent) ໜີອອກຈາກຕົວອັກສອນທີ່ບໍ່ປອດໄພໃນ URL ໂດຍໃຊ້ % ລຳດັບ; Base64 ຂຽນຄືນໄບຕ໌ດິບເປັນຕົວອັກສອນ 64 ຕົວອັກສອນ. ພວກເຂົາແກ້ໄຂບັນຫາການຂົນສົ່ງທີ່ແຕກຕ່າງກັນ."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ລະຫັດລັບຂອງລະຫັດຜ່ານປອດໄພບໍ?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ບໍ່. ມັນເປັນ XOR ງ່າຍດາຍສໍາລັບການ obfuscation ແສງສະຫວ່າງເທົ່ານັ້ນ. ເພື່ອຄວາມລັບທີ່ແທ້ຈິງໃຫ້ໃຊ້ຕົວສົ່ງຂ່າວທີ່ເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງຈຸດຈົບທີ່ເຫມາະສົມເຊັ່ນ Telegram Secret Chats."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "ແມ່ນຫຍັງ = ໃນຕອນທ້າຍຂອງ Base64?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "ມັນແມ່ນ padding. Base64 ເຮັດວຽກຢູ່ໃນຕັນຂອງສີ່ຕົວອັກສອນ; = ຕື່ມຂໍ້ມູນໃສ່ບລັອກສຸດທ້າຍເມື່ອຄວາມຍາວການປ້ອນຂໍ້ມູນບໍ່ແມ່ນຫຼາຍຂອງສາມໄບຕ໌."
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">ພາສາ: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <a href="/ja/">日本語</a> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <strong>ພາສາລາວ</strong> · <a href="/my/">မြန်မာ</a></nav>
+<h1>ຕົວເຂົ້າລະຫັດ Base64 / URL / Hex ແລະລະຫັດລັບແບບງ່າຍໆ</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_lo.webp"><img src="/img/cover_lo.png" alt="ຕົວເຂົ້າລະຫັດຂໍ້ຄວາມ Base64 URL Hex ແລະຕົວຢ່າງເຄື່ອງມືການເຂົ້າລະຫັດແບບງ່າຍໆ" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ຕົວເຂົ້າລະຫັດ Base64 / URL / Hex ແລະລະຫັດລະຫັດຜ່ານແບບງ່າຍໆ - ລູກຄ້າທັງຫມົດ.</figcaption></figure>
+<p>ວາງຂໍ້ຄວາມໃດນຶ່ງເພື່ອເຂົ້າລະຫັດ ຫຼືຖອດລະຫັດມັນເປັນ Base64, URL-escaped, ຫຼື Hex, ແລະເພື່ອນັບ UTF-8 bytes ແລະຕົວອັກສອນຂອງມັນ. ນອກນັ້ນຍັງມີລະຫັດລັບຂອງລະຫັດຜ່ານແບບງ່າຍດາຍສໍາລັບການເຮັດໃຫ້ສັບສົນໄວ. ທຸກສິ່ງທຸກຢ່າງເຮັດວຽກຢູ່ໃນຕົວທ່ອງເວັບຂອງທ່ານ; ຂໍ້ຄວາມຂອງເຈົ້າບໍ່ເຄີຍຖືກອັບໂຫຼດ.</p>
+<section class="tool"><h2>ເຂົ້າລະຫັດ, ຖອດລະຫັດ ແລະນັບ</h2><p class="note">ດໍາເນີນການທັງຫມົດໃນຕົວທ່ອງເວັບຂອງທ່ານ. Base64 ໃຊ້ TextEncoder ເພື່ອໃຫ້ Unicode ແລະ emoji ຖືກຈັດການຢ່າງຖືກຕ້ອງ.</p><label>ປ້ອນຂໍ້ຄວາມ</label><textarea id="tin" placeholder="ວາງ ຫຼືພິມຂໍ້ຄວາມໃສ່ບ່ອນນີ້..."></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 ໄບຕ໌ · <span id="cchars">0</span> ຕົວອັກສອນ</div><label>ວະລີຜ່ານ (ສຳລັບລະຫັດ)</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">ການເຂົ້າລະຫັດ Base64</button><button data-m="b64d">ຖອດລະຫັດ Base64</button><button data-m="urle">ການເຂົ້າລະຫັດ URL</button><button data-m="urld">ຖອດລະຫັດ URL</button><button data-m="hexe">ການເຂົ້າລະຫັດ Hex</button><button data-m="hexd">ຖອດລະຫັດ Hex</button><button data-m="cye">ລະຫັດລັບ (ເຂົ້າລະຫັດ)</button><button data-m="cyd">ລະຫັດລັບ (ຖອດລະຫັດ)</button></div><label>ຜົນຜະລິດ</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">ສຳເນົາຜົນຜະລິດ</button><button id="tclear">ຈະແຈ້ງ</button><button id="tswap">ຜົນຜະລິດທີ່ຈະປ້ອນຂໍ້ມູນ</button></div><p class="note">XOR obfuscation ງ່າຍດາຍ - ບໍ່ແມ່ນການທົດແທນສໍາລັບການເຂົ້າລະຫັດ end-to-end ທີ່ແທ້ຈິງ.</p></section>
+<h2>ການເຂົ້າລະຫັດຂໍ້ຄວາມແມ່ນຫຍັງ (ແລະບໍ່) ເຮັດ</h2><p>Base64, URL-escaping ແລະ Hex ແມ່ນການເຂົ້າລະຫັດ: ພວກເຂົາຂຽນຄືນໃຫມ່ bytes ເຂົ້າໄປໃນຊຸດຕົວອັກສອນທີ່ປອດໄພເພື່ອໃຫ້ຂໍ້ຄວາມແລະຂໍ້ມູນຖານສອງຢູ່ລອດການຂົນສົ່ງຜ່ານອີເມວ, URLs ແລະ JSON. ພວກມັນສາມາດປີ້ນກັບກັນໄດ້ຢ່າງເຕັມສ່ວນໂດຍໃຜແລະບໍ່ໃຫ້ຄວາມລັບ. ໃຊ້ພວກມັນເພື່ອຍ້າຍຂໍ້ມູນຢ່າງປອດໄພ, ບໍ່ແມ່ນເພື່ອເຊື່ອງມັນ.</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ຂໍ້ຄວາມ"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">ຂໍ້ຄວາມ</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 ໄບຕ໌</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">ກຸ່ມ 6 ບິດ</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>ທໍ່ Base64: ຂໍ້ຄວາມກາຍເປັນ UTF-8 bytes, bytes ຖືກແບ່ງອອກເປັນ 6-bit ກຸ່ມ, ແຕ່ລະກຸ່ມແຜນທີ່ເປັນຕົວອັກສອນ Base64 ຫນຶ່ງ.</figcaption></figure>
+<h2>Base64 ເຮັດວຽກແນວໃດ</h2><p>Base64 ຖືກກໍານົດໂດຍ RFC 4648. ມັນຈັດກຸ່ມການປ້ອນເຂົ້າເປັນ chunks 6-bit ແລະແຜນທີ່ແຕ່ລະ chunk ເປັນຫນຶ່ງຂອງ 64 ຕົວອັກສອນ (A-Z, a-z, 0-9, ບວກ + ແລະ /), padding ກັບ = ໃນຕອນທ້າຍຂອງ. ສາມ input bytes ກາຍ​ເປັນ​ສີ່​ຕົວ​ອັກ​ສອນ​ອອກ​, ດັ່ງ​ນັ້ນ​ຂໍ້​ຄວາມ​ທີ່​ເຂົ້າ​ລະ​ຫັດ​ແມ່ນ​ປະ​ມານ 33​% ຂະ​ຫນາດ​ໃຫຍ່​ກ​່​ວາ​ການ​ປ້ອນ​ຂໍ້​ມູນ​. ຕົວປ່ຽນແປງ URL-safe ແທນ + ແລະ / ກັບ - ແລະ _ ດັ່ງນັ້ນຜົນໄດ້ຮັບແມ່ນປອດໄພພາຍໃນການເຊື່ອມຕໍ່.</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_lo.webp"><img src="/img/board_lo.png" alt="ແຜນວາດປຽບທຽບການເຂົ້າລະຫັດແບບປີ້ນກັບກັນດ້ວຍການເຂົ້າລະຫັດ" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>ການເຂົ້າລະຫັດແມ່ນປີ້ນກັບກັນໂດຍບໍ່ມີກະແຈ; ມີພຽງແຕ່ລະຫັດລະຫັດລັບ ຫຼືການເຂົ້າລະຫັດແບບຕົ້ນທາງຈົນຈົບເທົ່ານັ້ນທີ່ຮັກສາຂໍ້ຄວາມເປັນຄວາມລັບ</figcaption></figure>
+<h2>ການເຂົ້າລະຫັດບໍ່ແມ່ນການເຂົ້າລະຫັດ</h2><p>ຄວາມຜິດພາດທົ່ວໄປແມ່ນການປິ່ນປົວ Base64 ເປັນວິທີການປົກປ້ອງຂໍ້ມູນ. ມັນບໍ່ແມ່ນ: ໃຜສາມາດຖອດລະຫັດມັນໄດ້. ລະຫັດລະຫັດຜ່ານໃນເຄື່ອງມືນີ້ເພີ່ມກະແຈ, ແຕ່ XOR ງ່າຍໆພຽງແຕ່ເປັນການລົບກວນທີ່ເບົາບາງ ແລະ ບໍ່ປອດໄພຕໍ່ກັບຜູ້ໂຈມຕີທີ່ກຳນົດໄວ້. ສໍາລັບຄວາມລັບທີ່ແທ້ຈິງ, ໃຫ້ໃຊ້ messenger ທີ່ມີການເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງຕອນທ້າຍທີ່ເຫມາະສົມ, ເຊັ່ນ Telegram Secret Chats, ເຊິ່ງໃຊ້ໂປໂຕຄອນ MTProto ກັບ 256-bit AES.</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ການເຂົ້າລະຫັດ (ປີ້ນກັບກັນໄດ້)"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">ການເຂົ້າລະຫັດ (ປີ້ນກັບກັນໄດ້)</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">ລະຫັດລະຫັດຜ່ານ</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">ສິ້ນສຸດເຖິງຈຸດຈົບ (MTProto)</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>ສາມ​ລະ​ດັບ​: ການ​ເຂົ້າ​ລະ​ຫັດ​ປີ​ກັບ​ຄືນ​ໄປ​ບ່ອນ (ບໍ່​ມີ​ຄວາມ​ລັບ​)​, ລະ​ຫັດ​ຜ່ານ​ລະ​ຫັດ​ຜ່ານ (ຄວາມ​ມືດ​ມົວ​)​, ແລະ​ການ​ເຂົ້າ​ລະ​ຫັດ​ທີ່​ແທ້​ຈິງ​ໃນ​ຕອນ​ທ້າຍ​.</figcaption></figure>
+<section class="i4data">
+<h2>ການເຂົ້າລະຫັດຄົງທີ່ &amp; ການເຂົ້າລະຫັດຂໍ້ຄວາມ (ຮູບຖ່າຍ 2026)</h2>
+<p>ຄ່າການເຂົ້າລະຫັດຂ້າງລຸ່ມນີ້ແມ່ນຄວາມຈິງທີ່ແນ່ນອນຈາກ RFC 4648 ແລະ MDN; ຕົວ​ເລກ​ການ​ສົ່ງ​ຂໍ້​ຄວາມ​ແມ່ນ​ການ​ຄາດ​ຄະ​ເນ​ໃນ​ປີ 2026 ທີ່​ໄດ້​ຍົກ​ອອກ​ມາ​ຈາກ​ການ​ຄາດ​ຄະ​ເນ​ຂອງ​ສາ​ທາ​ລະ​ນະ (ຕົວ​ເລກ​ການ​ປະ​ກາດ Telegram ແລະ Wikipedia​) - ບໍ່​ແມ່ນ​ການ​ວັດ​ແທກ​ດ້ວຍ​ມື​ທໍາ​ອິດ​.</p>
+<table>
+<tr><th>ການເຂົ້າລະຫັດຂໍ້ຄວາມແມ່ນ</th><th>ການເຂົ້າລະຫັດຄົງທີ່ &amp; ກາ</th></tr><tr><td>ຂະຫນາດ Base64 overhead</td><td>+33% (ສາມ input bytes ກາຍເປັນສີ່ຕົວອັກສອນ), ຕໍ່ RFC 4648 - ແນ່ນອນ</td></tr><tr><td>ຕົວອັກສອນ Base64</td><td>64 ຕົວອັກສອນ: A-Z, a-z, 0-9, + ແລະ /; padding = ; ໃຊ້ຕົວແປທີ່ປອດໄພ URL - ແລະ _ (RFC 4648 §4-5) - ຄືກັນອ້ອຍຕ້ອຍ</td></tr><tr><td>ຂອບເຂດຈໍາກັດ btoa / atob</td><td>ເຮັດວຽກຢູ່ໃນ Latin1 ເທົ່ານັ້ນ; UTF-8 ແລະ emoji ຕ້ອງການ TextEncoder / TextDecoder (MDN) - ແນ່ນອນ</td></tr><tr><td>Telegram ຜູ້ໃຊ້ທີ່ມີການເຄື່ອນໄຫວປະຈໍາເດືອນ</td><td>ລື່ນກາຍ 1 ຕື້ໃນເດືອນມີນາ 2025 (Pavel Durov); 2026 ຄາດຄະເນ: ການຂະຫຍາຍຕົວຢ່າງຕໍ່ເນື່ອງ</td></tr><tr><td>ການເຂົ້າລະຫັດ Telegram</td><td>MTProto ກັບ 256-bit AES, 2048-bit RSA ແລະ Diffie-Hellman; end-to-end ພຽງແຕ່ໃນ Secret Chats, ບໍ່ແມ່ນຄ່າເລີ່ມຕົ້ນ - ຕໍ່ Wikipedia</td></tr><tr><td>ເອົາໄປປະຕິບັດໄດ້</td><td>ໃຊ້ການເຂົ້າລະຫັດເພື່ອຍ້າຍຂໍ້ຄວາມຢ່າງປອດໄພ; ໃຊ້ Secret Chats (ຫຼືແອັບ end-to-end ອື່ນ) ເມື່ອທ່ານຕ້ອງການຄວາມລັບ</td></tr>
+</table>
+<p><small>ການເຂົ້າລະຫັດຄົງທີ່ແນ່ນອນ (RFC 4648 / MDN); ການຮັບຮອງເອົາການສົ່ງຂໍ້ຄວາມແມ່ນການຄາດຄະເນຂອງປີ 2026 ທີ່ອ້າງອີງຈາກພື້ນຖານສາທາລະນະທີ່ອ້າງອີງແລະການປ່ຽນແປງໃນໄລຍະເວລາ.</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>ຂໍ້ຄວາມຂອງຂ້ອຍຖືກອັບໂຫລດຢູ່ບ່ອນໃດ?</h3>
+<p>ບໍ່. ການເຂົ້າລະຫັດ, ການຖອດລະຫັດ ແລະລະຫັດລັບທັງໝົດດຳເນີນຢູ່ໃນບຣາວເຊີຂອງທ່ານດ້ວຍ API ຂອງເວັບມາດຕະຖານ; ຂໍ້ຄວາມຂອງເຈົ້າບໍ່ເຄີຍອອກຈາກອຸປະກອນຂອງທ່ານ.</p>
+<h3>Base64 ເຂົ້າລະຫັດຂໍ້ມູນຂອງຂ້ອຍບໍ?</h3>
+<p>ສະບັບເລກທີ Base64 ແມ່ນການເຂົ້າລະຫັດ, ບໍ່ແມ່ນການເຂົ້າລະຫັດ - ທຸກຄົນສາມາດຖອດລະຫັດມັນໄດ້. ມັນພຽງແຕ່ເຮັດໃຫ້ bytes ປອດໄພໃນການຂົນສົ່ງ, ມັນບໍ່ໄດ້ເກັບຮັກສາໃຫ້ເຂົາເຈົ້າເປັນຄວາມລັບ.</p>
+<h3>ເປັນຫຍັງ Base64 ຂອງ emoji ຫຼືຈີນເບິ່ງແຕກຕ່າງຈາກເຄື່ອງມືອື່ນໆ?</h3>
+<p>ເນື່ອງຈາກວ່າເຄື່ອງມືນີ້ເຂົ້າລະຫັດ UTF-8 bytes ທີ່ຖືກຕ້ອງຜ່ານ TextEncoder. ເຄື່ອງມືທີ່ໂທຫາ btoa() ລົ້ມເຫລວໂດຍກົງຫຼືຕົວລະຄອນທີ່ເສຍຫາຍຂ້າງເທິງ Latin1.</p>
+<h3>ຄວາມແຕກຕ່າງລະຫວ່າງການເຂົ້າລະຫັດ URL ແລະ Base64 ແມ່ນຫຍັງ?</h3>
+<p>ການເຂົ້າລະຫັດ URL (encodeURIComponent) ໜີອອກຈາກຕົວອັກສອນທີ່ບໍ່ປອດໄພໃນ URL ໂດຍໃຊ້ % ລຳດັບ; Base64 ຂຽນຄືນໄບຕ໌ດິບເປັນຕົວອັກສອນ 64 ຕົວອັກສອນ. ພວກເຂົາແກ້ໄຂບັນຫາການຂົນສົ່ງທີ່ແຕກຕ່າງກັນ.</p>
+<h3>ລະຫັດລັບຂອງລະຫັດຜ່ານປອດໄພບໍ?</h3>
+<p>ບໍ່. ມັນເປັນ XOR ງ່າຍດາຍສໍາລັບການ obfuscation ແສງສະຫວ່າງເທົ່ານັ້ນ. ເພື່ອຄວາມລັບທີ່ແທ້ຈິງໃຫ້ໃຊ້ຕົວສົ່ງຂ່າວທີ່ເຂົ້າລະຫັດແບບຕົ້ນທາງເຖິງຈຸດຈົບທີ່ເຫມາະສົມເຊັ່ນ Telegram Secret Chats.</p>
+<h3>ແມ່ນຫຍັງ = ໃນຕອນທ້າຍຂອງ Base64?</h3>
+<p>ມັນແມ່ນ padding. Base64 ເຮັດວຽກຢູ່ໃນຕັນຂອງສີ່ຕົວອັກສອນ; = ຕື່ມຂໍ້ມູນໃສ່ບລັອກສຸດທ້າຍເມື່ອຄວາມຍາວການປ້ອນຂໍ້ມູນບໍ່ແມ່ນຫຼາຍຂອງສາມໄບຕ໌.</p>
+</div>
+<div class="related"><h2>ເອົາ Telegram</h2><p>Telegram ເປັນແອັບສົ່ງຂໍ້ຄວາມທີ່ຖືກເຂົ້າລະຫັດດ້ວຍ Secret Chats ສຳລັບການເຂົ້າລະຫັດແບບຕົ້ນທາງ. ດາວນ໌ໂຫລດມັນສໍາລັບເວທີຂອງທ່ານ:</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram - ດາວ​ໂຫຼດ​ທຸກ​ເວ​ທີ​</a></p></div>
+<div class="sources"><h2>ເອກະສານອ້າງອີງ</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - ວິກິພີເດຍ (RFC 4648)</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - Base64 ໃນ JavaScript</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - ວິກິພີເດຍ</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>ລວບລວມໂດຍ Ye Fan ຈາກ RFC 4648, MDN Web Docs ແລະ Wikipedia. ສໍາລັບການອ້າງອິງເທົ່ານັ້ນ; ການເຂົ້າລະຫັດທັງໝົດ ແລະລະຫັດທີ່ເຮັດວຽກຢູ່ໃນທ້ອງຖິ່ນໃນຕົວທ່ອງເວັບຂອງທ່ານ.<br><a href="/about-yefan/" rel="author">ກ່ຽວກັບຜູ້ຂຽນ: Ye Fan</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "XOR obfuscation ງ່າຍດາຍ - ບໍ່ແມ່ນການທົດແທນສໍາລັບການເຂົ້າລະຫັດ end-to-end ທີ່ແທ້ຈິງ.", "clear": "ຈະແຈ້ງ", "copy": "ສຳເນົາຜົນຜະລິດ", "err_decode": "ການຖອດລະຫັດຜິດພາດ - ກວດເບິ່ງການປ້ອນຂໍ້ມູນ.", "l_bytes": "UTF-8 ໄບຕ໌", "l_chars": "ຕົວອັກສອນ", "l_in": "ປ້ອນຂໍ້ຄວາມ", "l_out": "ຜົນຜະລິດ", "l_pass": "ວະລີຜ່ານ (ສຳລັບລະຫັດ)", "m_b64d": "ຖອດລະຫັດ Base64", "m_b64e": "ການເຂົ້າລະຫັດ Base64", "m_cyd": "ລະຫັດລັບ (ຖອດລະຫັດ)", "m_cye": "ລະຫັດລັບ (ເຂົ້າລະຫັດ)", "m_hexd": "ຖອດລະຫັດ Hex", "m_hexe": "ການເຂົ້າລະຫັດ Hex", "m_urld": "ຖອດລະຫັດ URL", "m_urle": "ການເຂົ້າລະຫັດ URL", "ph_in": "ວາງ ຫຼືພິມຂໍ້ຄວາມໃສ່ບ່ອນນີ້...", "run": "ແປງ", "swap": "ຜົນຜະລິດທີ່ຈະປ້ອນຂໍ້ມູນ"};</script>
+<script src="/app.js"></script>
+</body></html>
