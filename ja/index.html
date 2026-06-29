@@ -1,0 +1,147 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Base64 / URL / Hex エンコーダー &amp; 簡易暗号 - 無料オンライン文字ツール</title>
+<meta name="description" content="無料のクライアント側文字ツール。Base64・URL・Hex のエンコード/デコード（UTF-8 を正しく処理）、バイト数と文字数の即時カウント、簡易パスフレーズ暗号。テキストは一切アップロードしません。">
+<link rel="canonical" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://africa48la.github.io/">
+<link rel="alternate" hreflang="zh-Hant" href="https://africa48la.github.io/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://africa48la.github.io/en/">
+<link rel="alternate" hreflang="ja" href="https://africa48la.github.io/ja/">
+<link rel="alternate" hreflang="id" href="https://africa48la.github.io/id/">
+<link rel="alternate" hreflang="th" href="https://africa48la.github.io/th/">
+<link rel="alternate" hreflang="vi" href="https://africa48la.github.io/vi/">
+<link rel="alternate" hreflang="ms" href="https://africa48la.github.io/ms/">
+<link rel="alternate" hreflang="fil" href="https://africa48la.github.io/fil/">
+<link rel="alternate" hreflang="km" href="https://africa48la.github.io/km/">
+<link rel="alternate" hreflang="lo" href="https://africa48la.github.io/lo/">
+<link rel="alternate" hreflang="my" href="https://africa48la.github.io/my/">
+<link rel="alternate" hreflang="x-default" href="https://africa48la.github.io/">
+<meta property="og:title" content="Base64 / URL / Hex エンコーダー &amp; 簡易暗号 - 無料オンライン文字ツール"><meta property="og:description" content="無料のクライアント側文字ツール。Base64・URL・Hex のエンコード/デコード（UTF-8 を正しく処理）、バイト数と文字数の即時カウント、簡易パスフレーズ暗号。テキストは一切アップロードしません。"><meta property="og:type" content="website"><meta property="og:url" content="https://africa48la.github.io/ja/"><meta property="og:image" content="https://africa48la.github.io/img/cover_ja.png">
+<link rel="stylesheet" href="/style.css">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebApplication",
+   "name": "Base64 / URL / Hex エンコーダー & 簡易暗号 - 無料オンライン文字ツール",
+   "url": "https://africa48la.github.io/ja/",
+   "applicationCategory": "UtilitiesApplication",
+   "operatingSystem": "Web browser",
+   "browserRequirements": "Requires JavaScript",
+   "inLanguage": "ja",
+   "description": "無料のクライアント側文字ツール。Base64・URL・Hex のエンコード/デコード（UTF-8 を正しく処理）、バイト数と文字数の即時カウント、簡易パスフレーズ暗号。テキストは一切アップロードしません。",
+   "isAccessibleForFree": true,
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+   },
+   "author": {
+    "@type": "Person",
+    "name": "Ye Fan",
+    "url": "https://africa48la.github.io/about-yefan/"
+   }
+  },
+  {
+   "@type": "FAQPage",
+   "inLanguage": "ja",
+   "url": "https://africa48la.github.io/ja/",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "私のテキストはアップロードされますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "いいえ。エンコード・デコード・暗号はすべて標準 Web API でブラウザ内処理され、テキストは端末から出ません。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 はデータを暗号化しますか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "いいえ。Base64 は暗号化ではなくエンコードで、誰でもデコードできます。運搬を安全にするだけで秘匿はしません。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "絵文字や日本語の Base64 が他ツールと違うのはなぜ？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "本ツールは TextEncoder で正しい UTF-8 バイトをエンコードするためです。btoa() を直接呼ぶツールは Latin1 を超える文字で失敗・破損します。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "URL エンコードと Base64 の違いは？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "URL エンコード（encodeURIComponent）は URL で危険な文字を % 列でエスケープし、Base64 は生バイトを 64 文字集合に書き換えます。解決する問題が異なります。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "このパスフレーズ暗号は安全ですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "いいえ。軽い難読化のための単純な XOR です。真に秘匿したいなら Telegram Secret Chat のような真の端到端暗号を使ってください。"
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "Base64 末尾の = は何ですか？",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "パディングです。Base64 は 4 文字ブロック単位で動き、入力長が 3 バイトの倍数でないとき = で最後のブロックを埋めます。"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body><div class="wrap"><main>
+<nav class="lang">言語: <a href="/">简体中文</a> · <a href="/zh-tw/">繁體中文</a> · <a href="/en/">English</a> · <strong>日本語</strong> · <a href="/id/">Bahasa Indonesia</a> · <a href="/th/">ไทย</a> · <a href="/vi/">Tiếng Việt</a> · <a href="/ms/">Bahasa Melayu</a> · <a href="/fil/">Filipino</a> · <a href="/km/">ភាសាខ្មែរ</a> · <a href="/lo/">ພາສາລາວ</a> · <a href="/my/">မြန်မာ</a></nav>
+<h1>Base64 / URL / Hex エンコーダー &amp; 簡易暗号</h1>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/cover_ja.webp"><img src="/img/cover_ja.png" alt="Base64 URL Hex 文字エンコーダーと簡易暗号ツールの図" fetchpriority="high" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>Base64 / URL / Hex エンコーダーと簡易パスフレーズ暗号——すべてクライアント側</figcaption></figure>
+<p>任意のテキストを貼り付ければ、Base64・URL エスケープ・Hex にエンコード/デコードでき、UTF-8 のバイト数と文字数も数えられます。さらに手早い難読化のための簡易パスフレーズ暗号もあります。すべてブラウザ内で動作し、テキストはアップロードされません。</p>
+<section class="tool"><h2>エンコード・デコード・カウント</h2><p class="note">すべてブラウザ内で実行。Base64 は TextEncoder を使うため Unicode と絵文字も正しく扱えます。</p><label>入力テキスト</label><textarea id="tin" placeholder="ここにテキストを貼り付け／入力…"></textarea><div class="stat"><span id="cbytes">0</span> UTF-8 バイト · <span id="cchars">0</span> 文字数</div><label>パスフレーズ（暗号用）</label><input id="tpass" type="text" autocomplete="off"><div class="modes"><button data-m="b64e">Base64 エンコード</button><button data-m="b64d">Base64 デコード</button><button data-m="urle">URL エンコード</button><button data-m="urld">URL デコード</button><button data-m="hexe">Hex エンコード</button><button data-m="hexd">Hex デコード</button><button data-m="cye">暗号化（パスフレーズ）</button><button data-m="cyd">復号（パスフレーズ）</button></div><label>出力</label><textarea id="tout" readonly></textarea><div class="btns"><button id="tcopy">出力をコピー</button><button id="tclear">クリア</button><button id="tswap">出力を入力へ</button></div><p class="note">単純な XOR 難読化——真の端到端暗号の代わりにはなりません。</p></section>
+<h2>文字エンコードができること・できないこと</h2><p>Base64・URL エスケープ・Hex はエンコードです。バイトを安全な文字集合に書き換え、テキストやバイナリをメール・URL・JSON 経由で安全に運べるようにします。誰でも完全に元へ戻せ、秘匿性はありません。データを隠すためではなく、安全に運ぶために使ってください。</p>
+<figure><svg viewBox="0 0 720 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="テキスト"><rect x="2" y="2" width="716" height="146" rx="14" fill="#f2fbf6" stroke="#cdeede"/><rect x="20" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="94" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">テキスト</text><path d="M168 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="200" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="274" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">UTF-8 バイト</text><path d="M348 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="380" y="46" width="148" height="58" rx="12" fill="#e7f7ef" stroke="#bfe6d2"/><text x="454" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#0f8a5f" text-anchor="middle">6 ビット群</text><path d="M528 75 l24 0 m-7 -6 l7 6 l-7 6" stroke="#86c7a8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><rect x="560" y="46" width="148" height="58" rx="12" fill="#10b981" stroke="#bfe6d2"/><text x="634" y="80" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="600" fill="#ffffff" text-anchor="middle">Base64</text><text x="360" y="128" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="#5b8a74" text-anchor="middle">3 bytes -> 4 chars · A-Z a-z 0-9 + / =</text></svg><figcaption>Base64 の流れ：テキストが UTF-8 バイトになり、6 ビットずつに分けられ、各グループが 1 つの Base64 文字に対応します。</figcaption></figure>
+<h2>Base64 の仕組み</h2><p>Base64 は RFC 4648 で定義されています。入力を 6 ビットごとに分け、各塊を 64 文字（A–Z、a–z、0–9 と + /）のいずれかに対応させ、末尾を = で詰めます。3 つの入力バイトが 4 つの出力文字になるため、エンコード後は入力より約 33% 大きくなります。URL セーフ版は + と / を - と _ に置き換え、リンク内でも安全にします。</p>
+<figure class="i4png"><picture><source type="image/webp" srcset="/img/board_ja.webp"><img src="/img/board_ja.png" alt="可逆エンコードと暗号化の対比図" loading="lazy" width="1120" height="746" style="width:100%;height:auto;border-radius:12px;border:1px solid #eee"></picture><figcaption>エンコードは鍵なしで元に戻せる。鍵を使う暗号、または真の端到端暗号だけがテキストを秘密に保てる</figcaption></figure>
+<h2>エンコードは暗号化ではない</h2><p>Base64 をデータ保護の手段と思うのはよくある誤解です。違います。誰でもデコードできます。本ツールのパスフレーズ暗号は鍵を加えますが、単純な XOR は軽い難読化にすぎず、本気の攻撃者には通用しません。真に秘匿したいなら、Telegram の Secret Chat のような真の端到端暗号を持つメッセンジャーを使ってください。MTProto と 256 ビット AES を採用しています。</p>
+<figure><svg viewBox="0 0 720 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="エンコード（可逆）"><rect x="2" y="2" width="716" height="216" rx="14" fill="#f7fafc" stroke="#e2e8f0"/><rect x="40" y="30" width="300" height="44" rx="10" fill="#93c5fd"/><text x="56" y="58" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#1e3a8a">エンコード（可逆）</text><rect x="40" y="90" width="430" height="44" rx="10" fill="#fbbf24"/><text x="56" y="118" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#7c2d12">パスフレーズ暗号</text><rect x="40" y="150" width="560" height="44" rx="10" fill="#34d399"/><text x="56" y="178" font-family="system-ui,Segoe UI,Arial" font-size="15" font-weight="700" fill="#064e3b">端到端（MTProto）</text><text x="40" y="208" font-family="system-ui,Arial" font-size="11.5" fill="#64748b">reversible -> light obfuscation -> real secrecy</text></svg><figcaption>3 つの段階：可逆エンコード（秘密なし）、パスフレーズ暗号（軽い難読化）、真の端到端暗号。</figcaption></figure>
+<section class="i4data">
+<h2>エンコード定数とメッセージ暗号（2026 スナップショット）</h2>
+<p>以下のエンコード値は RFC 4648 と MDN による正確な事実です。メッセージ関連の数字は公開基線（Telegram 公表値 + Wikipedia）から外挿した 2026 推計で、一次実測ではありません。</p>
+<table>
+<tr><th>文字エンコードができること・できないこと</th><th>エンコード定数とメッセージ暗号（2026 スナッ</th></tr><tr><td>Base64 のサイズ増加</td><td>+33%（入力 3 バイトが 4 文字に）、RFC 4648 による——正確</td></tr><tr><td>Base64 の文字集合</td><td>64 文字：A–Z、a–z、0–9、+ と /；パディング =；URL セーフ版は - と _（RFC 4648 §4–5）——正確</td></tr><tr><td>btoa / atob の制限</td><td>Latin1 のみ対応；UTF-8 と絵文字には TextEncoder / TextDecoder が必要（MDN）——正確</td></tr><tr><td>Telegram の月間アクティブ</td><td>2025 年 3 月に 10 億超（Pavel Durov）；2026 推計：成長継続</td></tr><tr><td>Telegram の暗号</td><td>MTProto（256 ビット AES・2048 ビット RSA・Diffie-Hellman）；端到端は Secret Chat のみで既定ではない——Wikipedia による</td></tr><tr><td>実践的な要点</td><td>テキストを安全に運ぶにはエンコード；秘匿が必要なら Secret Chat（または他の端到端アプリ）</td></tr>
+</table>
+<p><small>エンコード定数は正確（RFC 4648 / MDN）。メッセージ採用率は引用した公開基線からの 2026 推計で、時間とともに変わります。</small></p>
+</section>
+<div class="faq"><h2>FAQ</h2>
+<h3>私のテキストはアップロードされますか？</h3>
+<p>いいえ。エンコード・デコード・暗号はすべて標準 Web API でブラウザ内処理され、テキストは端末から出ません。</p>
+<h3>Base64 はデータを暗号化しますか？</h3>
+<p>いいえ。Base64 は暗号化ではなくエンコードで、誰でもデコードできます。運搬を安全にするだけで秘匿はしません。</p>
+<h3>絵文字や日本語の Base64 が他ツールと違うのはなぜ？</h3>
+<p>本ツールは TextEncoder で正しい UTF-8 バイトをエンコードするためです。btoa() を直接呼ぶツールは Latin1 を超える文字で失敗・破損します。</p>
+<h3>URL エンコードと Base64 の違いは？</h3>
+<p>URL エンコード（encodeURIComponent）は URL で危険な文字を % 列でエスケープし、Base64 は生バイトを 64 文字集合に書き換えます。解決する問題が異なります。</p>
+<h3>このパスフレーズ暗号は安全ですか？</h3>
+<p>いいえ。軽い難読化のための単純な XOR です。真に秘匿したいなら Telegram Secret Chat のような真の端到端暗号を使ってください。</p>
+<h3>Base64 末尾の = は何ですか？</h3>
+<p>パディングです。Base64 は 4 文字ブロック単位で動き、入力長が 3 バイトの倍数でないとき = で最後のブロックを埋めます。</p>
+</div>
+<div class="related"><h2>Telegram を入手</h2><p>Telegram は暗号メッセンジャーで、Secret Chat が端到端暗号を提供します。お使いのプラットフォーム向けにダウンロード：</p>
+<p><a href="https://telegramencrypted.com/download/">Telegram・全プラットフォーム ダウンロード</a></p></div>
+<div class="sources"><h2>参考文献</h2><ul><li><a href="https://en.wikipedia.org/wiki/Base64" rel="nofollow noopener" target="_blank">Base64 - Wikipedia（RFC 4648）</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Glossary/Base64" rel="nofollow noopener" target="_blank">MDN - JavaScript の Base64</a></li><li><a href="https://en.wikipedia.org/wiki/Telegram_(software)" rel="nofollow noopener" target="_blank">Telegram - Wikipedia</a></li><li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURIComponent" rel="nofollow noopener" target="_blank">MDN - encodeURIComponent</a></li></ul></div>
+</main>
+<footer>叶凡が RFC 4648、MDN Web Docs、Wikipedia をもとに整理。参考用です。エンコードと暗号はすべてブラウザ内でローカルに実行されます。<br><a href="/about-yefan/" rel="author">著者について：叶凡</a> · MIT License</footer>
+</div>
+<script>window.T={"cipher_note": "単純な XOR 難読化——真の端到端暗号の代わりにはなりません。", "clear": "クリア", "copy": "出力をコピー", "err_decode": "デコードエラー——入力を確認してください。", "l_bytes": "UTF-8 バイト", "l_chars": "文字数", "l_in": "入力テキスト", "l_out": "出力", "l_pass": "パスフレーズ（暗号用）", "m_b64d": "Base64 デコード", "m_b64e": "Base64 エンコード", "m_cyd": "復号（パスフレーズ）", "m_cye": "暗号化（パスフレーズ）", "m_hexd": "Hex デコード", "m_hexe": "Hex エンコード", "m_urld": "URL デコード", "m_urle": "URL エンコード", "ph_in": "ここにテキストを貼り付け／入力…", "run": "変換", "swap": "出力を入力へ"};</script>
+<script src="/app.js"></script>
+</body></html>
